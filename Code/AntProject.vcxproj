@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{290CD43D-F307-42B8-9C01-1CA12A816523}</ProjectGuid>
+    <RootNamespace>AntProject</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\AntProject.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\AntProject.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)libs\glm;$(SolutionDir)libs\freeglut\include;$(IncludePath);$(SolutionDir)\includes</IncludePath>
+    <LibraryPath>$(SolutionDir)libs\freeglut\lib\x86;$(LibraryPath);$(SolutionDir)libs\</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\intermediate\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)libs\glm;$(SolutionDir)libs\freeglut\include;$(IncludePath);$(SolutionDir)\includes</IncludePath>
+    <LibraryPath>$(SolutionDir)libs\freeglut\lib\x86;$(LibraryPath);$(SolutionDir)libs\</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\intermediate\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)bin</AdditionalLibraryDirectories>
+      <AdditionalDependencies>freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)bin</AdditionalLibraryDirectories>
+      <AdditionalDependencies>freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Ant.cpp" />
+    <ClCompile Include="AntFarm.cpp" />
+    <ClCompile Include="CollisionComponent.cpp" />
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="Cone.cpp" />
+    <ClCompile Include="Cube.cpp" />
+    <ClCompile Include="Food.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MathLib.cpp" />
+    <ClCompile Include="MeshComponent.cpp" />
+    <ClCompile Include="PhysicLib.cpp" />
+    <ClCompile Include="Primitives.cpp" />
+    <ClCompile Include="EngineCore.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="InputLib.cpp" />
+    <ClCompile Include="LogicLib.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Material.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Pixmap32RGBA.cpp" />
+    <ClCompile Include="Quad.cpp" />
+    <ClCompile Include="RenderLib.cpp" />
+    <ClCompile Include="RGBaxis.cpp" />
+    <ClCompile Include="RGBAxisEntity.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="Trail.cpp" />
+    <ClCompile Include="Viewport.cpp" />
+    <ClCompile Include="VisionCone.cpp" />
+    <ClCompile Include="Wall.cpp" />
+    <ClCompile Include="WarriorAnt.cpp" />
+    <ClCompile Include="WorkerAnt.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ant.h" />
+    <ClInclude Include="AntFarm.h" />
+    <ClInclude Include="checkML.h" />
+    <ClInclude Include="CollisionComponent.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="Cone.h" />
+    <ClInclude Include="Cube.h" />
+    <ClInclude Include="Food.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="MathLib.h" />
+    <ClInclude Include="MeshComponent.h" />
+    <ClInclude Include="PhysicLib.h" />
+    <ClInclude Include="Primitives.h" />
+    <ClInclude Include="EngineCore.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="InputLib.h" />
+    <ClInclude Include="LogicLib.h" />
+    <ClInclude Include="Material.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Pixmap32RGBA.h" />
+    <ClInclude Include="Quad.h" />
+    <ClInclude Include="RenderLib.h" />
+    <ClInclude Include="RGBaxis.h" />
+    <ClInclude Include="RGBAxisEntity.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Trail.h" />
+    <ClInclude Include="Viewport.h" />
+    <ClInclude Include="VisionCone.h" />
+    <ClInclude Include="Wall.h" />
+    <ClInclude Include="WarriorAnt.h" />
+    <ClInclude Include="WorkerAnt.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

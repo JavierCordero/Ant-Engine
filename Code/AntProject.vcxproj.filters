@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="EngineCore.cpp">
+      <Filter>EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicLib.cpp">
+      <Filter>EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="InputLib.cpp">
+      <Filter>EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>EngineCore\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>EngineCore\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Pixmap32RGBA.cpp">
+      <Filter>EngineCore\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Logic\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Logic\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="RGBaxis.cpp">
+      <Filter>Logic\Entities\RGBaxis</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderLib.cpp">
+      <Filter>EngineCore\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewport.cpp">
+      <Filter>EngineCore\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Cube.cpp">
+      <Filter>Logic\Entities\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Primitives.cpp">
+      <Filter>EngineCore\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Ant.cpp">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClCompile>
+    <ClCompile Include="Wall.cpp">
+      <Filter>Logic\Entities\Enviroment</Filter>
+    </ClCompile>
+    <ClCompile Include="PhysicLib.cpp">
+      <Filter>EngineCore\PhysicEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Logic\Entities\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshComponent.cpp">
+      <Filter>EngineCore\EngineComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionComponent.cpp">
+      <Filter>EngineCore\EngineComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="MathLib.cpp">
+      <Filter>EngineCore\MathLib</Filter>
+    </ClCompile>
+    <ClCompile Include="Food.cpp">
+      <Filter>Logic\Entities\Food</Filter>
+    </ClCompile>
+    <ClCompile Include="AntFarm.cpp">
+      <Filter>Logic\Entities\AntFarm</Filter>
+    </ClCompile>
+    <ClCompile Include="RGBAxisEntity.cpp">
+      <Filter>Logic\Entities\RGBaxis</Filter>
+    </ClCompile>
+    <ClCompile Include="Cone.cpp">
+      <Filter>Logic\Entities\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Trail.cpp">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClCompile>
+    <ClCompile Include="VisionCone.cpp">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClCompile>
+    <ClCompile Include="WarriorAnt.cpp">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkerAnt.cpp">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClCompile>
+    <ClCompile Include="Quad.cpp">
+      <Filter>EngineCore\PhysicEngine</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EngineCore.h">
+      <Filter>EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicLib.h">
+      <Filter>EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="InputLib.h">
+      <Filter>EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>EngineCore\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>EngineCore\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Pixmap32RGBA.h">
+      <Filter>EngineCore\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Logic\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Logic\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="RGBaxis.h">
+      <Filter>Logic\Entities\RGBaxis</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderLib.h">
+      <Filter>EngineCore\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewport.h">
+      <Filter>EngineCore\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Cube.h">
+      <Filter>Logic\Entities\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Primitives.h">
+      <Filter>EngineCore\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Ant.h">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClInclude>
+    <ClInclude Include="Wall.h">
+      <Filter>Logic\Entities\Enviroment</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicLib.h">
+      <Filter>EngineCore\PhysicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Logic\Entities\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshComponent.h">
+      <Filter>EngineCore\EngineComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionComponent.h">
+      <Filter>EngineCore\EngineComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="MathLib.h">
+      <Filter>EngineCore\MathLib</Filter>
+    </ClInclude>
+    <ClInclude Include="Food.h">
+      <Filter>Logic\Entities\Food</Filter>
+    </ClInclude>
+    <ClInclude Include="AntFarm.h">
+      <Filter>Logic\Entities\AntFarm</Filter>
+    </ClInclude>
+    <ClInclude Include="RGBAxisEntity.h">
+      <Filter>Logic\Entities\RGBaxis</Filter>
+    </ClInclude>
+    <ClInclude Include="Cone.h">
+      <Filter>Logic\Entities\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Trail.h">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClInclude>
+    <ClInclude Include="VisionCone.h">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClInclude>
+    <ClInclude Include="checkML.h">
+      <Filter>EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="WarriorAnt.h">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkerAnt.h">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClInclude>
+    <ClInclude Include="Quad.h">
+      <Filter>EngineCore\PhysicEngine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="EngineCore">
+      <UniqueIdentifier>{afcc6501-09d3-4f02-9dc6-76287a3c1b59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic">
+      <UniqueIdentifier>{48525615-85ec-4b71-916a-b284cfcab8fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Camera">
+      <UniqueIdentifier>{6c9f2f2f-5d4d-4546-baf4-8069e64ef5be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Scenes">
+      <UniqueIdentifier>{ba3b423f-5f0c-4704-9cac-1e7863b1da1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineCore\LogicEngine">
+      <UniqueIdentifier>{553d303f-e0b3-4f6b-926b-f10ccf8a9090}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Entities">
+      <UniqueIdentifier>{4f23bf44-0efc-441d-9ce8-ea25d9c85701}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Entities\RGBaxis">
+      <UniqueIdentifier>{64aaeda0-f3bf-477c-8ea1-9955f2a30569}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineCore\Render">
+      <UniqueIdentifier>{a6fbaf49-8991-42fb-9851-ce721189d59f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Entities\Ants">
+      <UniqueIdentifier>{038b6ecb-6696-4626-ac89-1d0869c8fb42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Entities\Enviroment">
+      <UniqueIdentifier>{8533c396-1d88-416a-931a-f67f04df30fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineCore\PhysicEngine">
+      <UniqueIdentifier>{2e4784d7-7f8e-42c0-b3f6-a7433b36b356}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Entities\Map">
+      <UniqueIdentifier>{7ae018b5-e3b9-4f96-8e03-fb0bf11e3fda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineCore\Texture">
+      <UniqueIdentifier>{9df13ccc-2168-4a70-a842-48a6bd10425b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineCore\EngineComponents">
+      <UniqueIdentifier>{9c6e65bb-db42-487c-bc17-f2815546845f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineCore\MathLib">
+      <UniqueIdentifier>{574ca6ca-13a7-4223-aed5-11f23975dbbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Entities\Food">
+      <UniqueIdentifier>{b8eb16c9-a862-4de8-8f76-8655dc5cb51d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Entities\AntFarm">
+      <UniqueIdentifier>{605ab330-9fc9-4a25-abe1-1cd4e1bc3e94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Entities\Geometry">
+      <UniqueIdentifier>{bb88aa3f-d684-4175-a9b9-7534d0e13a09}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

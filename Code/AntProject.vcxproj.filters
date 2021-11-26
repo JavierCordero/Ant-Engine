@@ -5,12 +5,6 @@
     <ClCompile Include="EngineCore.cpp">
       <Filter>EngineCore</Filter>
     </ClCompile>
-    <ClCompile Include="LogicLib.cpp">
-      <Filter>EngineCore</Filter>
-    </ClCompile>
-    <ClCompile Include="InputLib.cpp">
-      <Filter>EngineCore</Filter>
-    </ClCompile>
     <ClCompile Include="Material.cpp">
       <Filter>EngineCore\Texture</Filter>
     </ClCompile>
@@ -36,19 +30,19 @@
       <Filter>Logic\Entities\RGBaxis</Filter>
     </ClCompile>
     <ClCompile Include="RenderLib.cpp">
-      <Filter>EngineCore\Render</Filter>
+      <Filter>EngineCore\RenderEngine</Filter>
     </ClCompile>
     <ClCompile Include="Mesh.cpp">
       <Filter>EngineCore\LogicEngine</Filter>
     </ClCompile>
     <ClCompile Include="Viewport.cpp">
-      <Filter>EngineCore\Render</Filter>
+      <Filter>EngineCore\RenderEngine</Filter>
     </ClCompile>
     <ClCompile Include="Cube.cpp">
       <Filter>Logic\Entities\Geometry</Filter>
     </ClCompile>
     <ClCompile Include="Primitives.cpp">
-      <Filter>EngineCore\Render</Filter>
+      <Filter>EngineCore\RenderEngine</Filter>
     </ClCompile>
     <ClCompile Include="Ant.cpp">
       <Filter>Logic\Entities\Ants</Filter>
@@ -101,15 +95,114 @@
     <ClCompile Include="Quad.cpp">
       <Filter>EngineCore\PhysicEngine</Filter>
     </ClCompile>
+    <ClCompile Include="InputLib.cpp">
+      <Filter>EngineCore\InputEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="LogicEngine.cpp">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore\EngineComponents\MeshComponent.cpp">
+      <Filter>EngineCore\EngineComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore\EngineComponents\CollisionComponent.cpp">
+      <Filter>EngineCore\EngineComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore\InputEngine\InputLib.cpp">
+      <Filter>EngineCore\InputEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore\LogicEngine\Mesh.cpp">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore\LogicEngine\Object.cpp">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore\LogicEngine\Component.cpp">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore\LogicEngine\Entity.cpp">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore\LogicEngine\LogicEngine.cpp">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore\MathLib\MathLib.cpp">
+      <Filter>EngineCore\MathLib</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore\PhysicEngine\Quad.cpp">
+      <Filter>EngineCore\PhysicEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore\PhysicEngine\PhysicLib.cpp">
+      <Filter>EngineCore\PhysicEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore\RenderEngine\Viewport.cpp">
+      <Filter>EngineCore\RenderEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore\RenderEngine\Primitives.cpp">
+      <Filter>EngineCore\RenderEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore\RenderEngine\RenderLib.cpp">
+      <Filter>EngineCore\RenderEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore\Texture\Texture.cpp">
+      <Filter>EngineCore\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore\Texture\Material.cpp">
+      <Filter>EngineCore\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore\Texture\Pixmap32RGBA.cpp">
+      <Filter>EngineCore\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore\EngineCore.cpp">
+      <Filter>EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic\Camera\Camera.cpp">
+      <Filter>Logic\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic\Scenes\Scene.cpp">
+      <Filter>Logic\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic\Entities\AntFarm\AntFarm.cpp">
+      <Filter>Logic\Entities\AntFarm</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic\Entities\Ants\WarriorAnt.cpp">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic\Entities\Ants\WorkerAnt.cpp">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic\Entities\Ants\Ant.cpp">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic\Entities\Ants\Trail.cpp">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic\Entities\Ants\VisionCone.cpp">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic\Entities\Enviroment\Wall.cpp">
+      <Filter>Logic\Entities\Enviroment</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic\Entities\Food\Food.cpp">
+      <Filter>Logic\Entities\Food</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic\Entities\Geometry\Cone.cpp">
+      <Filter>Logic\Entities\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic\Entities\Geometry\Cube.cpp">
+      <Filter>Logic\Entities\Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic\Entities\Map\Map.cpp">
+      <Filter>Logic\Entities\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic\Entities\RGBAxis\RGBAxisEntity.cpp">
+      <Filter>Logic\Entities\RGBaxis</Filter>
+    </ClCompile>
+    <ClCompile Include="Logic\Entities\RGBAxis\RGBaxis.cpp">
+      <Filter>Logic\Entities\RGBaxis</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EngineCore.h">
-      <Filter>EngineCore</Filter>
-    </ClInclude>
-    <ClInclude Include="LogicLib.h">
-      <Filter>EngineCore</Filter>
-    </ClInclude>
-    <ClInclude Include="InputLib.h">
       <Filter>EngineCore</Filter>
     </ClInclude>
     <ClInclude Include="Material.h">
@@ -137,19 +230,19 @@
       <Filter>Logic\Entities\RGBaxis</Filter>
     </ClInclude>
     <ClInclude Include="RenderLib.h">
-      <Filter>EngineCore\Render</Filter>
+      <Filter>EngineCore\RenderEngine</Filter>
     </ClInclude>
     <ClInclude Include="Mesh.h">
       <Filter>EngineCore\LogicEngine</Filter>
     </ClInclude>
     <ClInclude Include="Viewport.h">
-      <Filter>EngineCore\Render</Filter>
+      <Filter>EngineCore\RenderEngine</Filter>
     </ClInclude>
     <ClInclude Include="Cube.h">
       <Filter>Logic\Entities\Geometry</Filter>
     </ClInclude>
     <ClInclude Include="Primitives.h">
-      <Filter>EngineCore\Render</Filter>
+      <Filter>EngineCore\RenderEngine</Filter>
     </ClInclude>
     <ClInclude Include="Ant.h">
       <Filter>Logic\Entities\Ants</Filter>
@@ -205,6 +298,114 @@
     <ClInclude Include="Quad.h">
       <Filter>EngineCore\PhysicEngine</Filter>
     </ClInclude>
+    <ClInclude Include="InputLib.h">
+      <Filter>EngineCore\InputEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="LogicEngine.h">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\EngineComponents\CollisionComponent.h">
+      <Filter>EngineCore\EngineComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\EngineComponents\MeshComponent.h">
+      <Filter>EngineCore\EngineComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\InputEngine\InputLib.h">
+      <Filter>EngineCore\InputEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\LogicEngine\LogicEngine.h">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\LogicEngine\Mesh.h">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\LogicEngine\Object.h">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\LogicEngine\Component.h">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\LogicEngine\Entity.h">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\MathLib\MathLib.h">
+      <Filter>EngineCore\MathLib</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\PhysicEngine\Quad.h">
+      <Filter>EngineCore\PhysicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\PhysicEngine\PhysicLib.h">
+      <Filter>EngineCore\PhysicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\RenderEngine\Viewport.h">
+      <Filter>EngineCore\RenderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\RenderEngine\Primitives.h">
+      <Filter>EngineCore\RenderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\RenderEngine\RenderLib.h">
+      <Filter>EngineCore\RenderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\Texture\Pixmap32RGBA.h">
+      <Filter>EngineCore\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\Texture\Texture.h">
+      <Filter>EngineCore\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\Texture\Material.h">
+      <Filter>EngineCore\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\EngineCore.h">
+      <Filter>EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore\checkML.h">
+      <Filter>EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Camera\Camera.h">
+      <Filter>Logic\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Scenes\Scene.h">
+      <Filter>Logic\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Entities\AntFarm\AntFarm.h">
+      <Filter>Logic\Entities\AntFarm</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Entities\Ants\VisionCone.h">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Entities\Ants\WarriorAnt.h">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Entities\Ants\WorkerAnt.h">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Entities\Ants\Ant.h">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Entities\Ants\Trail.h">
+      <Filter>Logic\Entities\Ants</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Entities\Enviroment\Wall.h">
+      <Filter>Logic\Entities\Enviroment</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Entities\Food\Food.h">
+      <Filter>Logic\Entities\Food</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Entities\Geometry\Cube.h">
+      <Filter>Logic\Entities\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Entities\Geometry\Cone.h">
+      <Filter>Logic\Entities\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Entities\Map\Map.h">
+      <Filter>Logic\Entities\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Entities\RGBAxis\RGBAxisEntity.h">
+      <Filter>Logic\Entities\RGBaxis</Filter>
+    </ClInclude>
+    <ClInclude Include="Logic\Entities\RGBAxis\RGBaxis.h">
+      <Filter>Logic\Entities\RGBaxis</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="EngineCore">
@@ -227,9 +428,6 @@
     </Filter>
     <Filter Include="Logic\Entities\RGBaxis">
       <UniqueIdentifier>{64aaeda0-f3bf-477c-8ea1-9955f2a30569}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="EngineCore\Render">
-      <UniqueIdentifier>{a6fbaf49-8991-42fb-9851-ce721189d59f}</UniqueIdentifier>
     </Filter>
     <Filter Include="Logic\Entities\Ants">
       <UniqueIdentifier>{038b6ecb-6696-4626-ac89-1d0869c8fb42}</UniqueIdentifier>
@@ -260,6 +458,12 @@
     </Filter>
     <Filter Include="Logic\Entities\Geometry">
       <UniqueIdentifier>{bb88aa3f-d684-4175-a9b9-7534d0e13a09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineCore\RenderEngine">
+      <UniqueIdentifier>{a6fbaf49-8991-42fb-9851-ce721189d59f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineCore\InputEngine">
+      <UniqueIdentifier>{1f5ce094-69db-47a3-a88b-37277cf0f586}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

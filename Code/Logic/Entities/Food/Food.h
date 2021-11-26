@@ -1,6 +1,5 @@
 #pragma once
-#include "Entity.h"
-
+#include "..\..\..\EngineCore\LogicEngine\Entity.h"
 
 class Food : public Entity
 {

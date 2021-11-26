@@ -1,8 +1,10 @@
 #include "CollisionComponent.h"
-#include "PhysicLib.h"
+#include "..\PhysicEngine\PhysicLib.h"
+
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\checkML.h"
 #endif // _DEBUG
+
 CollisionComponent::CollisionComponent(Object* _componentObjectReference, glm::vec3 _position, glm::vec3 _size, bool _isStatic) : isStatic(_isStatic), Component(_componentObjectReference),
 	position(_position), size(_size)
 {

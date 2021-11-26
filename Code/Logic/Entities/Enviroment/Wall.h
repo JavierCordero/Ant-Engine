@@ -1,6 +1,6 @@
 #pragma once
-#include "Entity.h"
-#include "Cube.h"
+#include "..\..\..\EngineCore\LogicEngine\Entity.h"
+#include "..\Geometry\Cube.h"
 
 
 class Wall : public Entity

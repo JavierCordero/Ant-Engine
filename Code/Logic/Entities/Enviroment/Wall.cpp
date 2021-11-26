@@ -1,11 +1,12 @@
 #include "Wall.h"
-#include "CollisionComponent.h"
-#include "MeshComponent.h"
-#include "PhysicLib.h"
+#include "..\..\..\EngineCore\EngineComponents\CollisionComponent.h"
+#include "..\..\..\EngineCore\EngineComponents\MeshComponent.h"
+#include "..\..\..\EngineCore\PhysicEngine\PhysicLib.h"
 
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\..\..\EngineCore\checkML.h"
 #endif // _DEBUG
+
 Wall::Wall(glm::vec3 _position, glm::vec3 _size, glm::vec3 _color) : Entity(_position, _size)
 {
 	//meshes.push_back(new Cube(_x, _y, _z, _width));

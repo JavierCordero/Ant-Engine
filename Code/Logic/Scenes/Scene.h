@@ -4,8 +4,9 @@
 
 #include <GL/freeglut.h>
 #include <vector>
-#include "Camera.h"
-#include "Entity.h"
+#include "..\Camera\Camera.h"
+#include "..\..\EngineCore\LogicEngine\Entity.h"
+
 class Map;
 //-------------------------------------------------------------------------
 

@@ -1,15 +1,16 @@
 #include "Ant.h"
-#include "CollisionComponent.h"
-#include "MeshComponent.h"
-#include "MathLib.h"
+#include "..\..\..\EngineCore\EngineComponents\CollisionComponent.h"
+#include "..\..\..\EngineCore\EngineComponents\MeshComponent.h"
+#include "..\..\..\EngineCore\MathLib\MathLib.h"
 #include <iostream>
 #include <math.h>
-#include "AntFarm.h"
+#include "..\AntFarm\AntFarm.h"
 #include "Trail.h"
 
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\..\..\EngineCore\checkML.h"
 #endif // _DEBUG
+
 Ant::Ant(glm::vec3 _position, glm::vec3 _size, glm::vec4 _antColor, AntFarm* _antFarmReference) : antFarmReference(_antFarmReference), Entity(_position, _size) {
 
 	collision = new CollisionComponent(this, _position, _size);

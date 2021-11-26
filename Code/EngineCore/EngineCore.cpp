@@ -1,9 +1,9 @@
 #include "EngineCore.h"
 
-#include "RenderLib.h"
-#include "LogicLib.h"
-#include "InputLib.h"
-#include "PhysicLib.h"
+#include "RenderEngine/RenderLib.h"
+#include "LogicEngine/LogicEngine.h"
+#include "InputEngine/InputLib.h"
+#include "PhysicEngine/PhysicLib.h"
 #include <time.h>
 #ifdef _DEBUG
 #include "checkML.h"

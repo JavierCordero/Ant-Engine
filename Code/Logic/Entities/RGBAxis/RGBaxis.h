@@ -1,6 +1,7 @@
 #pragma once
-#include "Entity.h"
-#include "Mesh.h"
+
+#include "..\..\..\EngineCore\LogicEngine\Entity.h"
+#include "..\..\..\EngineCore\LogicEngine\Mesh.h"
 
 class RGBaxis : public Mesh
 {

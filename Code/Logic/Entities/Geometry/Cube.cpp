@@ -4,9 +4,11 @@
 #include <gtc/constants.hpp>
 #include <gtc/matrix_transform.hpp>
 #include <gtc/type_ptr.hpp>
+
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\..\..\EngineCore\checkML.h"
 #endif // _DEBUG
+
 Cube::Cube(glm::vec3 _size, Object* _objectReference) : Mesh(_objectReference)
 {
 	CreateCube(_size, _objectReference);

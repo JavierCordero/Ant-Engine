@@ -2,9 +2,11 @@
 
 #include <gtc/matrix_transform.hpp>  
 #include <gtc/type_ptr.hpp>
+
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\checkML.h"
 #endif // _DEBUG
+
 using namespace glm;
 
 //-------------------------------------------------------------------------

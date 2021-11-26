@@ -1,6 +1,6 @@
 #pragma once
-#include "Component.h"
-#include "Object.h"
+#include "..\LogicEngine\Component.h"
+#include "..\LogicEngine\Object.h"
 
 class CollisionComponent : public Component
 {

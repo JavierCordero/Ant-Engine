@@ -2,10 +2,10 @@
 
 #include <gtc/matrix_transform.hpp>  
 #include <gtc/type_ptr.hpp>
-#include "EngineCore.h"
+#include "..\EngineCore.h"
 
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\checkML.h"
 #endif // _DEBUG
 //-------------------------------------------------------------------------
 

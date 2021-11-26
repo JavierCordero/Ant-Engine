@@ -1,8 +1,9 @@
 #include "Map.h"
-#include "Wall.h"
+#include "..\Enviroment\Wall.h"
+#include "..\..\..\EngineCore\LogicEngine\LogicEngine.h"
 
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\..\..\EngineCore\checkML.h"
 #endif // _DEBUG
 
 Map::Map(Scene* _mainScene) : mainScene(_mainScene) {
@@ -35,12 +36,14 @@ void Map::InitNormalMap() {
 	for (int i = -50; i < 50; ++i) {
 		for (int j = -50; j < 50; ++j) {
 
+			antHomeWalls[arrayX][arrayY] = nullptr; //Por si acaso...
+
 			if (i == -50 || i == 49 || j == 49 || j == -50) {
 				antHomeWalls[arrayX][arrayY] = new Wall(glm::vec3(i * 10.0f, j * 10.0f, 0.0f), glm::vec3(10.0, 10.0, 10.0));
 				mainScene->sceneObjects.push_back(antHomeWalls[arrayX][arrayY]);
 			}
 
-			/*else if (rand() % 100 + 1 <= 10) {
+			else if (rand() % 100 + 1 <= 10) {
 
 				antHomeWalls[arrayX][arrayY] = new Wall(glm::vec3(i * 10.f, j * 10.f, 0.0), glm::vec3(10.0, 10.0, 10.0));
 				mainScene->sceneObjects.push_back(antHomeWalls[arrayX][arrayY]);
@@ -48,7 +51,7 @@ void Map::InitNormalMap() {
 
 			else {
 				antHomeWalls[arrayX][arrayY] = nullptr;
-			}*/
+			}
 
 			++arrayY;
 		}
@@ -81,15 +84,9 @@ void Map::InitLifeGenerationMap() {
 				if (antHomeWalls[arrayX][arrayY] != nullptr)
 				{
 					if (aliveNeighbours > 3 || aliveNeighbours < 2) {
-						//auto it = std::find(mainScene->sceneObjects.begin(), mainScene->sceneObjects.end(), antHomeWalls[arrayX][arrayY]);
-
-						//if (it != mainScene->sceneObjects.end()) {
-						//	int index = it - mainScene->sceneObjects.begin();
-						//	mainScene->sceneObjects.erase(mainScene->sceneObjects.begin() + index);
-						antHomeWalls[arrayX][arrayY]->Destroy();
-						delete antHomeWalls[arrayX][arrayY];
-						antHomeWalls[arrayX][arrayY] = nullptr;
-						//}
+						if (antHomeWalls[arrayX][arrayY] != nullptr) {
+							LogicLib::Destroy(antHomeWalls[arrayX][arrayY]);
+						}
 					}
 				}
 

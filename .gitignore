@@ -1,4 +1,4 @@
 /.vs
 /intermediate
-/bin
 Temp.txt
+*.pdb

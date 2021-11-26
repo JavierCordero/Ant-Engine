@@ -1,8 +1,10 @@
 #include "Primitives.h"
-#include "MathLib.h"
+#include "..\MathLib\MathLib.h"
+
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\checkML.h"
 #endif // _DEBUG
+
 
 Mesh* Primitives::CreateCubeOutline(double _width, glm::vec3 _color, Object* _objectReference, Mesh* _targetMesh) {
 

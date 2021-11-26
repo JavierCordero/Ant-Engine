@@ -1,7 +1,7 @@
 #include "MathLib.h"
 
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\checkML.h"
 #endif // _DEBUG
 
 glm::vec3 MathLib::ClampMagnitude(glm::vec3 _vector, float magnitude) {

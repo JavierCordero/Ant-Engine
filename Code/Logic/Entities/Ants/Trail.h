@@ -1,6 +1,7 @@
 #pragma once
-#include "Entity.h"
-#include "MeshComponent.h"
+
+#include "..\..\..\EngineCore\LogicEngine\Entity.h"
+#include "..\..\..\EngineCore\EngineComponents\MeshComponent.h"
 
 #include "Ant.h"
 

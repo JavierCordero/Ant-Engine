@@ -2,11 +2,10 @@
 #include "PixMap32RGBA.h"
 #include <fstream>
 #include <exception>
+
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\checkML.h"
 #endif // _DEBUG
-//using namespace std;
-//---------------------------------------------------------------------------
 
 // cabeceras del archivo bmp
 // tipo y valores para nuestro caso: bmp en modo bgr de 24 bits con los pixeles por filas bottom to top y columnas left to right

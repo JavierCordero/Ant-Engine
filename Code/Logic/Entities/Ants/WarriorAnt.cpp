@@ -1,6 +1,10 @@
 #include "WarriorAnt.h"
-#include "MathLib.h"
-#include "PhysicLib.h"
+#include "..\..\..\EngineCore\MathLib\MathLib.h"
+#include "..\..\..\EngineCore\PhysicEngine\PhysicLib.h"
+
+#ifdef _DEBUG
+#include "..\..\..\EngineCore\checkML.h"
+#endif // _DEBUG
 
 WarriorAnt::WarriorAnt(glm::vec3 _position, glm::vec3 _size, glm::vec4 _antColor, AntFarm* _antFarmReference) : Ant(_position, _size, _antColor, _antFarmReference) {
 	useTrail = false;

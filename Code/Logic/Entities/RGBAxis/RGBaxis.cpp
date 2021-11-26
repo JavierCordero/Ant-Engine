@@ -1,7 +1,9 @@
 #include "RGBaxis.h"
+
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\..\..\EngineCore\checkML.h"
 #endif // _DEBUG
+
 RGBaxis::RGBaxis(GLdouble _size, Object* _objectReference) : Mesh(_objectReference)
 {
 	CreateAxis(_size);

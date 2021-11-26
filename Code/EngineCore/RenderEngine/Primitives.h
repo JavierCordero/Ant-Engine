@@ -1,5 +1,5 @@
 #pragma once
-#include "Mesh.h"
+#include "..\LogicEngine\Mesh.h"
 
 
 static class Primitives

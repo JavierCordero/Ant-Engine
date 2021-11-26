@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
-#include "Object.h"
-#include "CollisionComponent.h"
+#include "..\LogicEngine\Object.h"
+#include "..\EngineComponents\CollisionComponent.h"
 #include "Quad.h"
 
 static enum class PhysicLayer { Static = 0, WorkerAnts = 1, WarriorAnts = 2, AntFarm = 3};

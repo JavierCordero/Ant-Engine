@@ -1,8 +1,8 @@
 #pragma once
 
-#include "RenderLib.h"
-#include "Camera.h"
-#include "Scene.h"
+#include "..\RenderEngine\RenderLib.h"
+#include "..\..\Logic\Camera\Camera.h"
+#include "..\..\Logic\Scenes\Scene.h"
 #include "Entity.h"
 #include <vector>
 #include <string>

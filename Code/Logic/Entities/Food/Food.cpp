@@ -1,10 +1,12 @@
 #include "Food.h"
-#include "MeshComponent.h"
-#include "Cube.h"
-#include "CollisionComponent.h"
+#include "..\..\..\EngineCore\EngineComponents\MeshComponent.h"
+#include "..\Geometry\Cube.h"
+#include "..\..\..\EngineCore\EngineComponents\CollisionComponent.h"
+
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\..\..\EngineCore\checkML.h"
 #endif // _DEBUG
+
 Food::Food(glm::vec3 _position, glm::vec3 _size, glm::vec3 _foodColor) : Entity(_position, _size) {
 
 	MeshComponent* cube = new MeshComponent(new Cube(_size, _foodColor, this), this);

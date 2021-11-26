@@ -1,7 +1,9 @@
 #include "Texture.h"
+
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\checkML.h"
 #endif // _DEBUG
+
 void Texture::init() {
 	glGenTextures(1, &id); // genera un identificador para una nueva textura
 	glBindTexture(GL_TEXTURE_2D, id); // Filters and clamping

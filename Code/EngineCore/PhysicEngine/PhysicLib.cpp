@@ -1,7 +1,7 @@
 #include "PhysicLib.h"
 
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\checkML.h"
 #endif // _DEBUG
 
 std::vector<CollisionComponent*> PhysicLib::colliders; //WOW! 

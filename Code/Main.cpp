@@ -1,9 +1,9 @@
-﻿#include "EngineCore.h"
-#include "Scene.h"
+﻿#include "EngineCore/EngineCore.h"
+#include "Logic/Scenes/Scene.h"
 #include <iostream>
 
 #ifdef _DEBUG
-#include "checkML.h"
+#include "EngineCore/checkML.h"
 #endif // _DEBUG
 
 using namespace std;

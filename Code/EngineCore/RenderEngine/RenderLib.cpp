@@ -6,9 +6,11 @@
 #include <gl/GLU.h>
 #include <GL/glut.h>
 #include <GL/freeglut.h>
+
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\checkML.h"
 #endif // _DEBUG
+
 int RenderLib::window = 0;
 const char* RenderLib::WINDOW_NAME = "Ant project";
 

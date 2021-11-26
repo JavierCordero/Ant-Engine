@@ -5,7 +5,7 @@
 #include <cmath>
 
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\checkML.h"
 #endif // _DEBUG
 
 using namespace std;

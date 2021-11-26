@@ -1,15 +1,16 @@
 #include "VisionCone.h"
-#include "MeshComponent.h"
-#include "Cone.h"
-#include "Food.h"
+#include "..\..\..\EngineCore\EngineComponents\MeshComponent.h"
+#include "..\Geometry\Cone.h"
+#include "..\Food\Food.h"
 #include <iostream>
-#include "LogicLib.h"
+#include "..\..\..\EngineCore\LogicEngine\LogicEngine.h"
 #include "Ant.h"
-#include "AntFarm.h"
+#include "..\AntFarm\AntFarm.h"
 
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\..\..\EngineCore\checkML.h"
 #endif // _DEBUG
+
 VisionCone::VisionCone(glm::vec3 _position, double _baseRadious, float _height, glm::vec4 _color, Ant* _antReference) : antReference(_antReference), Entity(_position, glm::vec3(_baseRadious, _height, _baseRadious))
 {
 

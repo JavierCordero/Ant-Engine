@@ -1,5 +1,5 @@
 #pragma once
-#include "Object.h"
+#include "..\LogicEngine\Object.h"
 // Used to hold details of a point
 struct Point
 {

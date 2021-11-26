@@ -1,10 +1,10 @@
 #pragma once
-#include "Entity.h"
-#include "Cube.h"
+#include "..\..\..\EngineCore\LogicEngine\Entity.h"
+#include "..\Geometry\Cube.h"
 #include <list>
-#include "LogicLib.h"
-#include "Cone.h"
-#include "MeshComponent.h"
+#include "..\..\..\EngineCore\LogicEngine\LogicEngine.h"
+#include "..\Geometry\Cone.h"
+#include "..\..\..\EngineCore\EngineComponents\MeshComponent.h"
 #include "VisionCone.h"
 
 class AntFarm;

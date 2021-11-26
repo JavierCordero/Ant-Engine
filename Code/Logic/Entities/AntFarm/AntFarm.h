@@ -1,10 +1,10 @@
 #pragma once
 
-#include "Entity.h"
-#include "Scene.h"
-#include "Ant.h"
-#include "Object.h"
-#include "Trail.h"
+#include "..\..\..\EngineCore\LogicEngine\Entity.h"
+#include "..\..\Scenes\Scene.h"
+#include "..\Ants\Ant.h"
+#include "..\..\..\EngineCore\LogicEngine\Object.h"
+#include "..\Ants\Trail.h"
 
 class AntFarm : public Entity
 {

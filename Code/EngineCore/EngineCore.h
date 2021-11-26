@@ -1,6 +1,6 @@
 #pragma once
 #include <chrono>
-#include "Scene.h"
+#include "..\Logic\Scenes\Scene.h"
 
 static class EngineCore
 {

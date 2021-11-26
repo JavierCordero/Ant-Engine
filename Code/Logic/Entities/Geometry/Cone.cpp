@@ -1,7 +1,9 @@
 #include "Cone.h"
+
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\..\..\EngineCore\checkML.h"
 #endif // _DEBUG
+
 Cone::Cone(double _baseRadious, float _height, Object* _objectReference) : Mesh(_objectReference)
 {
 	CreateCone(_baseRadious, _height, _objectReference);

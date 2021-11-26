@@ -1,7 +1,7 @@
 #pragma once
-#include "Scene.h"
-#include "EngineCore.h"
-#include "LogicLib.h"
+#include "..\..\Logic\Scenes\Scene.h"
+#include "..\EngineCore.h"
+#include "..\LogicEngine\LogicEngine.h"
 #include <string>
 
 static class RenderLib

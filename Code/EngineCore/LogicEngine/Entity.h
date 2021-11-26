@@ -7,8 +7,8 @@
 #include <GL/freeglut.h>
 #include <glm.hpp>
 #include "Mesh.h"
-#include "Texture.h"
-#include "Material.h"
+#include "..\Texture\Texture.h"
+#include "..\Texture\Material.h"
 #include <map>
 #include <vector>
 #include <list>

@@ -1,9 +1,10 @@
 #include "Trail.h"
-#include "Cube.h"
+#include "..\Geometry\Cube.h"
 
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\..\..\EngineCore\checkML.h"
 #endif // _DEBUG
+
 Trail::Trail(glm::vec3 _position, glm::vec3 _size, glm::vec4 _antColor) : Entity(_position, _size) {
 	meshComponent = new MeshComponent(new Cube(_size, _antColor, this), this);
 	entityComponents.push_back(meshComponent);

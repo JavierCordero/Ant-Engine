@@ -1,6 +1,7 @@
 #pragma once
 
-#include "Scene.h"
+#include "..\..\Scenes\Scene.h"
+
 class Map
 {
 public:

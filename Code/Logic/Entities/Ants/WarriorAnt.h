@@ -1,6 +1,6 @@
 #pragma once
 #include "Ant.h"
-#include "AntFarm.h"
+#include "..\AntFarm\AntFarm.h"
 #include "Trail.h"
 class WarriorAnt : public Ant
 {

@@ -1,8 +1,10 @@
 #include "InputLib.h"
 #include <iostream>
+
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\checkML.h"
 #endif // _DEBUG
+
 void InputLib::Init() {
 	std::cout << "Initializing Input lib..." << '\n';
 }

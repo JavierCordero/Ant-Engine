@@ -1,6 +1,6 @@
 #pragma once
-#include "Entity.h"
-#include "CollisionComponent.h"
+#include "..\..\..\EngineCore\LogicEngine\Entity.h"
+#include "..\..\..\EngineCore\EngineComponents\CollisionComponent.h"
 
 class Ant;
 

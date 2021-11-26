@@ -1,7 +1,7 @@
 #pragma once
-#include "Component.h"
-#include "Object.h"
-#include "Mesh.h"
+#include "..\LogicEngine\Component.h"
+#include "..\LogicEngine\Object.h"
+#include "..\LogicEngine\Mesh.h"
 
 class MeshComponent : public Component
 {

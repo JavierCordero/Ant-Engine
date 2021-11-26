@@ -22,7 +22,7 @@ public:
 	glm::dvec3* getVertices() { return vertices; };
 	glm::dvec4* getColors() { return colors; };
 
-	inline void ChangeColor(glm::dvec4 _newColor) { for (int i = 0; i < numVertices; ++i) { colors[i] = _newColor; }; }
+	inline void ChangeColor(glm::dvec4 _newColor) { for (int i = 0; i < (int)numVertices; ++i) { colors[i] = _newColor; }; }
 
 	inline void SetObjectReference(Object* _objectReference) { objectReference = _objectReference; }
 

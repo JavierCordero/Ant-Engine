@@ -1,7 +1,9 @@
 #include "Viewport.h"
+
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\checkML.h"
 #endif // _DEBUG
+
 Viewport::Viewport(GLsizei _width, GLsizei _height) : width(_width), height(_height)
 {
 	SetSize(width, height);

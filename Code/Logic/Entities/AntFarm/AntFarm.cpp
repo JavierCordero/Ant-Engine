@@ -1,13 +1,14 @@
 #include "AntFarm.h"
-#include "MeshComponent.h"
-#include "Cube.h"
-#include "WorkerAnt.h"
-#include "WarriorAnt.h"
-#include "PhysicLib.h"
+#include "..\..\..\EngineCore\EngineComponents\MeshComponent.h"
+#include "..\..\Entities\Geometry\Cube.h"
+#include "..\Ants\WorkerAnt.h"
+#include "..\Ants\WarriorAnt.h"
+#include "..\..\..\EngineCore\PhysicEngine\PhysicLib.h"
 
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\..\..\EngineCore\checkML.h"
 #endif // _DEBUG
+
 AntFarm::AntFarm(glm::vec3 _position, glm::vec3 _size, glm::vec4 _foodColor, glm::vec3 _textPosition) : antFarmColor(_foodColor), textPosition(_textPosition), Entity(_position, _size) {
 
 	MeshComponent* cube = new MeshComponent(new Cube(glm::vec3(_size.x - 100, _size.y - 100, _size.z - 100), _foodColor, this), this);

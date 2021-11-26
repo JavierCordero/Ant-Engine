@@ -1,6 +1,7 @@
 #pragma once
-#include "Entity.h"
-#include "Primitives.h"
+
+#include "..\..\..\EngineCore\LogicEngine\Entity.h"
+#include "..\..\..\EngineCore\RenderEngine\Primitives.h"
 
 class Cone : public Mesh
 {

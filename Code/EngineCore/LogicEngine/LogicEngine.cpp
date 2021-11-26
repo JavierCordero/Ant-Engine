@@ -1,9 +1,10 @@
-#include "LogicLib.h"
+#include "..\LogicEngine\LogicEngine.h"
 #include <iostream>
 #include <chrono>
-#include "EngineCore.h"
+#include "..\EngineCore.h"
+
 #ifdef _DEBUG
-#include "checkML.h"
+#include "..\checkML.h"
 #endif // _DEBUG
 
 std::vector<Entity*> LogicLib::destroyEntities; //WOW! 

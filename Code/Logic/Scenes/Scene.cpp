@@ -1,11 +1,16 @@
 #include "Scene.h"
-#include "AntFarm.h"
-#include "Food.h"
-#include "RGBAxisEntity.h"
+#include "..\Entities\AntFarm\AntFarm.h"
+#include "..\Entities\Food\Food.h"
+#include "..\Entities\RGBAxis\RGBaxisEntity.h"
 #include <iostream>
-#include "RenderLib.h"
+#include "..\..\EngineCore\RenderEngine\RenderLib.h"
 
-#include "Map.h"
+#include "..\Entities\Map\Map.h"
+
+#ifdef _DEBUG
+#include "..\..\EngineCore\checkML.h"
+#endif // _DEBUG
+
 
 //-------------------------------------------------------------------------
 

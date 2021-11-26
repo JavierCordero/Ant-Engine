@@ -19,9 +19,6 @@ public:
 	static Quad* quadTree;
 
 private: 
-	
-	static bool IsPointInCube(glm::vec3 _point, CollisionComponent* _cube);
-	static bool OverlappingCubes(CollisionComponent* _cubeA, CollisionComponent* _cubeB);
 	static bool FinalCheck(CollisionComponent* _collider, CollisionComponent* _objectToCheck);
 };
 

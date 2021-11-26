@@ -64,3 +64,43 @@ bool MathLib::IsPointInsideCone(glm::vec3 _conePosition, glm::vec3 _forwardVecto
 
 	return orthDistance < radious;
 }
+
+bool MathLib::IsPointInCube(glm::vec3 _point, glm::vec3 _cubePosition, glm::vec3 _cubeSize) {
+	int minX = _cubePosition.x - _cubeSize.x;
+	int maxX = _cubePosition.x + _cubeSize.x;
+
+	int minY = _cubePosition.y - _cubeSize.y;
+	int maxY = _cubePosition.y + _cubeSize.y;
+
+	int minZ = _cubePosition.z - _cubeSize.z;
+	int maxZ = _cubePosition.z + _cubeSize.z;
+
+	if (minX <= _point.x && _point.x <= maxX && minY <= _point.y && _point.y <= maxY && minZ <= _point.z && _point.z <= maxZ)
+		return true;
+	return false;
+}
+
+bool MathLib::OverlappingCubes(glm::vec3 _cubeAPosition, glm::vec3 _cubeASize, glm::vec3 _cubeBPosition, glm::vec3 _cubeBSize) {
+
+	int minXA = _cubeAPosition.x - _cubeASize.x;
+	int maxXA = _cubeAPosition.x + _cubeASize.x;
+
+	int minYA = _cubeAPosition.y - _cubeASize.y;
+	int maxYA = _cubeAPosition.y + _cubeASize.y;
+
+	int minZA = _cubeAPosition.z - _cubeASize.z;
+	int maxZA = _cubeAPosition.z + _cubeASize.z;
+
+	int minXB = _cubeBPosition.x - _cubeBSize.x;
+	int maxXB = _cubeBPosition.x + _cubeBSize.x;
+
+	int minYB = _cubeBPosition.y - _cubeBSize.y;
+	int maxYB = _cubeBPosition.y + _cubeBSize.y;
+
+	int minZB = _cubeBPosition.z - _cubeBSize.z;
+	int maxZB = _cubeBPosition.z + _cubeBSize.z;
+
+	return (minXA <= maxXB && maxXA >= minXB) &&
+		(minYA <= maxYB && maxYA >= minYB) &&
+		(minZA <= maxZB && maxZA >= minZB);
+}

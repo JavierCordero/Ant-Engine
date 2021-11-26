@@ -1,4 +1,5 @@
 #include "PhysicLib.h"
+#include "..\MathLib\MathLib.h"
 
 #ifdef _DEBUG
 #include "..\checkML.h"
@@ -42,7 +43,7 @@ bool PhysicLib::FinalCheck(CollisionComponent* _collider, CollisionComponent* _o
 	if (_collider->componentObjectReference != _objectToCheck->componentObjectReference && _collider->componentObjectReference->collisionLayer != _objectToCheck->componentObjectReference->collisionLayer
 		&& !_collider->componentObjectReference->markedForDestroy && !_objectToCheck->componentObjectReference->markedForDestroy) {
 
-		if (OverlappingCubes(_objectToCheck, _collider)) {
+		if (MathLib::OverlappingCubes(_objectToCheck->position, _objectToCheck->size, _collider->position, _collider->size)) {
 
 			if (_objectToCheck->isTrigger) {
 				_objectToCheck->componentObjectReference->OnTriggerEnter(_collider->componentObjectReference);
@@ -60,44 +61,4 @@ bool PhysicLib::FinalCheck(CollisionComponent* _collider, CollisionComponent* _o
 	}
 
 	return false;
-}
-
-bool PhysicLib::IsPointInCube(glm::vec3 _point, CollisionComponent* _cube) {
-	int minX = _cube->position.x - _cube->size.x;
-	int maxX = _cube->position.x + _cube->size.x;
-
-	int minY = _cube->position.y - _cube->size.y;
-	int maxY = _cube->position.y + _cube->size.y;
-
-	int minZ = _cube->position.z - _cube->size.z;
-	int maxZ = _cube->position.z + _cube->size.z;
-
-	if (minX <= _point.x && _point.x <= maxX && minY <= _point.y && _point.y <= maxY && minZ <= _point.z && _point.z <= maxZ)
-		return true;
-	return false;
-}
-
-bool PhysicLib::OverlappingCubes(CollisionComponent* _cubeA, CollisionComponent* _cubeB) {
-
-	int minXA = _cubeA->position.x - _cubeA->size.x;
-	int maxXA = _cubeA->position.x + _cubeA->size.x;
-
-	int minYA = _cubeA->position.y - _cubeA->size.y;
-	int maxYA = _cubeA->position.y + _cubeA->size.y;
-
-	int minZA = _cubeA->position.z - _cubeA->size.z;
-	int maxZA = _cubeA->position.z + _cubeA->size.z;
-
-	int minXB = _cubeB->position.x - _cubeB->size.x;
-	int maxXB = _cubeB->position.x + _cubeB->size.x;
-
-	int minYB = _cubeB->position.y - _cubeB->size.y;
-	int maxYB = _cubeB->position.y + _cubeB->size.y;
-
-	int minZB = _cubeB->position.z - _cubeB->size.z;
-	int maxZB = _cubeB->position.z + _cubeB->size.z;
-
-	return (minXA <= maxXB && maxXA >= minXB) &&
-		(minYA <= maxYB && maxYA >= minYB) &&
-		(minZA <= maxZB && maxZA >= minZB);
 }

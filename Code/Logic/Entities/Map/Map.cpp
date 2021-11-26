@@ -43,15 +43,15 @@ void Map::InitNormalMap() {
 				mainScene->sceneObjects.push_back(antHomeWalls[arrayX][arrayY]);
 			}
 
-			else if (rand() % 100 + 1 <= 10) {
+			//else if (rand() % 100 + 1 <= 10) {
 
-				antHomeWalls[arrayX][arrayY] = new Wall(glm::vec3(i * 10.f, j * 10.f, 0.0), glm::vec3(10.0, 10.0, 10.0));
-				mainScene->sceneObjects.push_back(antHomeWalls[arrayX][arrayY]);
-			}
+			//	antHomeWalls[arrayX][arrayY] = new Wall(glm::vec3(i * 10.f, j * 10.f, 0.0), glm::vec3(10.0, 10.0, 10.0));
+			//	mainScene->sceneObjects.push_back(antHomeWalls[arrayX][arrayY]);
+			//}
 
-			else {
-				antHomeWalls[arrayX][arrayY] = nullptr;
-			}
+			//else {
+			//	antHomeWalls[arrayX][arrayY] = nullptr;
+			//}
 
 			++arrayY;
 		}

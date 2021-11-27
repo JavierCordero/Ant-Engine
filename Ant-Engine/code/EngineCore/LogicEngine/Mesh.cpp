@@ -77,7 +77,7 @@ bool Mesh::LoadObjFile(const char* _path)
 	std::vector< glm::vec2 > temp_uvs;
 	std::vector< glm::vec3 > temp_normals;
 
-	_path = "assets/cube.obj";
+	_path = "assets/models/cube.obj";
 
 	FILE* file = fopen(_path, "r");
 	if (file == NULL) {

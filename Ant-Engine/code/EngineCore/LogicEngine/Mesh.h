@@ -6,6 +6,7 @@
 #include <glm.hpp>
 #include <gtc/constants.hpp>
 #include "Object.h"
+#include <vector>
 
 //-------------------------------------------------------------------------
 
@@ -25,6 +26,8 @@ public:
 	inline void ChangeColor(glm::dvec4 _newColor) { for (int i = 0; i < (int)numVertices; ++i) { colors[i] = _newColor; }; }
 
 	inline void SetObjectReference(Object* _objectReference) { objectReference = _objectReference; }
+
+	bool LoadObjFile(const char* _path);
 
 	void ChangeAlpha(float _alpha) {
 		alpha = _alpha; 

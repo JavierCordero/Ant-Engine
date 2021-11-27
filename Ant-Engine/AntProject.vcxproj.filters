@@ -1,208 +1,208 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="EngineCore\EngineComponents\MeshComponent.cpp">
+    <ClCompile Include="code\Main.cpp" />
+    <ClCompile Include="code\EngineCore\EngineComponents\CollisionComponent.cpp">
       <Filter>EngineCore\EngineComponents</Filter>
     </ClCompile>
-    <ClCompile Include="EngineCore\EngineComponents\CollisionComponent.cpp">
+    <ClCompile Include="code\EngineCore\EngineComponents\MeshComponent.cpp">
       <Filter>EngineCore\EngineComponents</Filter>
     </ClCompile>
-    <ClCompile Include="EngineCore\InputEngine\InputLib.cpp">
+    <ClCompile Include="code\EngineCore\InputEngine\InputLib.cpp">
       <Filter>EngineCore\InputEngine</Filter>
     </ClCompile>
-    <ClCompile Include="EngineCore\LogicEngine\Mesh.cpp">
+    <ClCompile Include="code\EngineCore\LogicEngine\Component.cpp">
       <Filter>EngineCore\LogicEngine</Filter>
     </ClCompile>
-    <ClCompile Include="EngineCore\LogicEngine\Object.cpp">
+    <ClCompile Include="code\EngineCore\LogicEngine\Entity.cpp">
       <Filter>EngineCore\LogicEngine</Filter>
     </ClCompile>
-    <ClCompile Include="EngineCore\LogicEngine\Component.cpp">
+    <ClCompile Include="code\EngineCore\LogicEngine\LogicEngine.cpp">
       <Filter>EngineCore\LogicEngine</Filter>
     </ClCompile>
-    <ClCompile Include="EngineCore\LogicEngine\Entity.cpp">
+    <ClCompile Include="code\EngineCore\LogicEngine\Mesh.cpp">
       <Filter>EngineCore\LogicEngine</Filter>
     </ClCompile>
-    <ClCompile Include="EngineCore\LogicEngine\LogicEngine.cpp">
+    <ClCompile Include="code\EngineCore\LogicEngine\Object.cpp">
       <Filter>EngineCore\LogicEngine</Filter>
     </ClCompile>
-    <ClCompile Include="EngineCore\MathLib\MathLib.cpp">
+    <ClCompile Include="code\EngineCore\MathLib\MathLib.cpp">
       <Filter>EngineCore\MathLib</Filter>
     </ClCompile>
-    <ClCompile Include="EngineCore\PhysicEngine\Quad.cpp">
+    <ClCompile Include="code\EngineCore\PhysicEngine\PhysicLib.cpp">
       <Filter>EngineCore\PhysicEngine</Filter>
     </ClCompile>
-    <ClCompile Include="EngineCore\PhysicEngine\PhysicLib.cpp">
+    <ClCompile Include="code\EngineCore\PhysicEngine\Quad.cpp">
       <Filter>EngineCore\PhysicEngine</Filter>
     </ClCompile>
-    <ClCompile Include="EngineCore\RenderEngine\Viewport.cpp">
+    <ClCompile Include="code\EngineCore\RenderEngine\Primitives.cpp">
       <Filter>EngineCore\RenderEngine</Filter>
     </ClCompile>
-    <ClCompile Include="EngineCore\RenderEngine\Primitives.cpp">
+    <ClCompile Include="code\EngineCore\RenderEngine\RenderLib.cpp">
       <Filter>EngineCore\RenderEngine</Filter>
     </ClCompile>
-    <ClCompile Include="EngineCore\RenderEngine\RenderLib.cpp">
+    <ClCompile Include="code\EngineCore\RenderEngine\Viewport.cpp">
       <Filter>EngineCore\RenderEngine</Filter>
     </ClCompile>
-    <ClCompile Include="EngineCore\Texture\Texture.cpp">
+    <ClCompile Include="code\EngineCore\Texture\Material.cpp">
       <Filter>EngineCore\Texture</Filter>
     </ClCompile>
-    <ClCompile Include="EngineCore\Texture\Material.cpp">
+    <ClCompile Include="code\EngineCore\Texture\Pixmap32RGBA.cpp">
       <Filter>EngineCore\Texture</Filter>
     </ClCompile>
-    <ClCompile Include="EngineCore\Texture\Pixmap32RGBA.cpp">
+    <ClCompile Include="code\EngineCore\Texture\Texture.cpp">
       <Filter>EngineCore\Texture</Filter>
     </ClCompile>
-    <ClCompile Include="EngineCore\EngineCore.cpp">
+    <ClCompile Include="code\EngineCore\EngineCore.cpp">
       <Filter>EngineCore</Filter>
     </ClCompile>
-    <ClCompile Include="Logic\Camera\Camera.cpp">
+    <ClCompile Include="code\Logic\Camera\Camera.cpp">
       <Filter>Logic\Camera</Filter>
     </ClCompile>
-    <ClCompile Include="Logic\Scenes\Scene.cpp">
+    <ClCompile Include="code\Logic\Scenes\Scene.cpp">
       <Filter>Logic\Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="Logic\Entities\AntFarm\AntFarm.cpp">
+    <ClCompile Include="code\Logic\Entities\AntFarm\AntFarm.cpp">
       <Filter>Logic\Entities\AntFarm</Filter>
     </ClCompile>
-    <ClCompile Include="Logic\Entities\Ants\WarriorAnt.cpp">
+    <ClCompile Include="code\Logic\Entities\Ants\Ant.cpp">
       <Filter>Logic\Entities\Ants</Filter>
     </ClCompile>
-    <ClCompile Include="Logic\Entities\Ants\WorkerAnt.cpp">
+    <ClCompile Include="code\Logic\Entities\Ants\Trail.cpp">
       <Filter>Logic\Entities\Ants</Filter>
     </ClCompile>
-    <ClCompile Include="Logic\Entities\Ants\Ant.cpp">
+    <ClCompile Include="code\Logic\Entities\Ants\VisionCone.cpp">
       <Filter>Logic\Entities\Ants</Filter>
     </ClCompile>
-    <ClCompile Include="Logic\Entities\Ants\Trail.cpp">
+    <ClCompile Include="code\Logic\Entities\Ants\WarriorAnt.cpp">
       <Filter>Logic\Entities\Ants</Filter>
     </ClCompile>
-    <ClCompile Include="Logic\Entities\Ants\VisionCone.cpp">
+    <ClCompile Include="code\Logic\Entities\Ants\WorkerAnt.cpp">
       <Filter>Logic\Entities\Ants</Filter>
     </ClCompile>
-    <ClCompile Include="Logic\Entities\Enviroment\Wall.cpp">
+    <ClCompile Include="code\Logic\Entities\Enviroment\Wall.cpp">
       <Filter>Logic\Entities\Enviroment</Filter>
     </ClCompile>
-    <ClCompile Include="Logic\Entities\Food\Food.cpp">
+    <ClCompile Include="code\Logic\Entities\Food\Food.cpp">
       <Filter>Logic\Entities\Food</Filter>
     </ClCompile>
-    <ClCompile Include="Logic\Entities\Geometry\Cone.cpp">
+    <ClCompile Include="code\Logic\Entities\Geometry\Cube.cpp">
       <Filter>Logic\Entities\Geometry</Filter>
     </ClCompile>
-    <ClCompile Include="Logic\Entities\Geometry\Cube.cpp">
+    <ClCompile Include="code\Logic\Entities\Geometry\Cone.cpp">
       <Filter>Logic\Entities\Geometry</Filter>
     </ClCompile>
-    <ClCompile Include="Logic\Entities\Map\Map.cpp">
+    <ClCompile Include="code\Logic\Entities\Map\Map.cpp">
       <Filter>Logic\Entities\Map</Filter>
     </ClCompile>
-    <ClCompile Include="Logic\Entities\RGBAxis\RGBAxisEntity.cpp">
+    <ClCompile Include="code\Logic\Entities\RGBAxis\RGBaxis.cpp">
       <Filter>Logic\Entities\RGBaxis</Filter>
     </ClCompile>
-    <ClCompile Include="Logic\Entities\RGBAxis\RGBaxis.cpp">
+    <ClCompile Include="code\Logic\Entities\RGBAxis\RGBAxisEntity.cpp">
       <Filter>Logic\Entities\RGBaxis</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EngineCore\EngineComponents\CollisionComponent.h">
+    <ClInclude Include="code\EngineCore\EngineComponents\CollisionComponent.h">
       <Filter>EngineCore\EngineComponents</Filter>
     </ClInclude>
-    <ClInclude Include="EngineCore\EngineComponents\MeshComponent.h">
+    <ClInclude Include="code\EngineCore\EngineComponents\MeshComponent.h">
       <Filter>EngineCore\EngineComponents</Filter>
     </ClInclude>
-    <ClInclude Include="EngineCore\InputEngine\InputLib.h">
+    <ClInclude Include="code\EngineCore\InputEngine\InputLib.h">
       <Filter>EngineCore\InputEngine</Filter>
     </ClInclude>
-    <ClInclude Include="EngineCore\LogicEngine\LogicEngine.h">
+    <ClInclude Include="code\EngineCore\LogicEngine\Component.h">
       <Filter>EngineCore\LogicEngine</Filter>
     </ClInclude>
-    <ClInclude Include="EngineCore\LogicEngine\Mesh.h">
+    <ClInclude Include="code\EngineCore\LogicEngine\Entity.h">
       <Filter>EngineCore\LogicEngine</Filter>
     </ClInclude>
-    <ClInclude Include="EngineCore\LogicEngine\Object.h">
+    <ClInclude Include="code\EngineCore\LogicEngine\LogicEngine.h">
       <Filter>EngineCore\LogicEngine</Filter>
     </ClInclude>
-    <ClInclude Include="EngineCore\LogicEngine\Component.h">
+    <ClInclude Include="code\EngineCore\LogicEngine\Mesh.h">
       <Filter>EngineCore\LogicEngine</Filter>
     </ClInclude>
-    <ClInclude Include="EngineCore\LogicEngine\Entity.h">
+    <ClInclude Include="code\EngineCore\LogicEngine\Object.h">
       <Filter>EngineCore\LogicEngine</Filter>
     </ClInclude>
-    <ClInclude Include="EngineCore\MathLib\MathLib.h">
+    <ClInclude Include="code\EngineCore\MathLib\MathLib.h">
       <Filter>EngineCore\MathLib</Filter>
     </ClInclude>
-    <ClInclude Include="EngineCore\PhysicEngine\Quad.h">
+    <ClInclude Include="code\EngineCore\PhysicEngine\PhysicLib.h">
       <Filter>EngineCore\PhysicEngine</Filter>
     </ClInclude>
-    <ClInclude Include="EngineCore\PhysicEngine\PhysicLib.h">
+    <ClInclude Include="code\EngineCore\PhysicEngine\Quad.h">
       <Filter>EngineCore\PhysicEngine</Filter>
     </ClInclude>
-    <ClInclude Include="EngineCore\RenderEngine\Viewport.h">
+    <ClInclude Include="code\EngineCore\RenderEngine\Primitives.h">
       <Filter>EngineCore\RenderEngine</Filter>
     </ClInclude>
-    <ClInclude Include="EngineCore\RenderEngine\Primitives.h">
+    <ClInclude Include="code\EngineCore\RenderEngine\RenderLib.h">
       <Filter>EngineCore\RenderEngine</Filter>
     </ClInclude>
-    <ClInclude Include="EngineCore\RenderEngine\RenderLib.h">
+    <ClInclude Include="code\EngineCore\RenderEngine\Viewport.h">
       <Filter>EngineCore\RenderEngine</Filter>
     </ClInclude>
-    <ClInclude Include="EngineCore\Texture\Pixmap32RGBA.h">
+    <ClInclude Include="code\EngineCore\Texture\Material.h">
       <Filter>EngineCore\Texture</Filter>
     </ClInclude>
-    <ClInclude Include="EngineCore\Texture\Texture.h">
+    <ClInclude Include="code\EngineCore\Texture\Pixmap32RGBA.h">
       <Filter>EngineCore\Texture</Filter>
     </ClInclude>
-    <ClInclude Include="EngineCore\Texture\Material.h">
+    <ClInclude Include="code\EngineCore\Texture\Texture.h">
       <Filter>EngineCore\Texture</Filter>
     </ClInclude>
-    <ClInclude Include="EngineCore\EngineCore.h">
+    <ClInclude Include="code\EngineCore\checkML.h">
       <Filter>EngineCore</Filter>
     </ClInclude>
-    <ClInclude Include="EngineCore\checkML.h">
+    <ClInclude Include="code\EngineCore\EngineCore.h">
       <Filter>EngineCore</Filter>
     </ClInclude>
-    <ClInclude Include="Logic\Camera\Camera.h">
+    <ClInclude Include="code\Logic\Camera\Camera.h">
       <Filter>Logic\Camera</Filter>
     </ClInclude>
-    <ClInclude Include="Logic\Scenes\Scene.h">
+    <ClInclude Include="code\Logic\Scenes\Scene.h">
       <Filter>Logic\Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="Logic\Entities\AntFarm\AntFarm.h">
+    <ClInclude Include="code\Logic\Entities\AntFarm\AntFarm.h">
       <Filter>Logic\Entities\AntFarm</Filter>
     </ClInclude>
-    <ClInclude Include="Logic\Entities\Ants\VisionCone.h">
+    <ClInclude Include="code\Logic\Entities\Ants\Ant.h">
       <Filter>Logic\Entities\Ants</Filter>
     </ClInclude>
-    <ClInclude Include="Logic\Entities\Ants\WarriorAnt.h">
+    <ClInclude Include="code\Logic\Entities\Ants\Trail.h">
       <Filter>Logic\Entities\Ants</Filter>
     </ClInclude>
-    <ClInclude Include="Logic\Entities\Ants\WorkerAnt.h">
+    <ClInclude Include="code\Logic\Entities\Ants\VisionCone.h">
       <Filter>Logic\Entities\Ants</Filter>
     </ClInclude>
-    <ClInclude Include="Logic\Entities\Ants\Ant.h">
+    <ClInclude Include="code\Logic\Entities\Ants\WarriorAnt.h">
       <Filter>Logic\Entities\Ants</Filter>
     </ClInclude>
-    <ClInclude Include="Logic\Entities\Ants\Trail.h">
+    <ClInclude Include="code\Logic\Entities\Ants\WorkerAnt.h">
       <Filter>Logic\Entities\Ants</Filter>
     </ClInclude>
-    <ClInclude Include="Logic\Entities\Enviroment\Wall.h">
+    <ClInclude Include="code\Logic\Entities\Enviroment\Wall.h">
       <Filter>Logic\Entities\Enviroment</Filter>
     </ClInclude>
-    <ClInclude Include="Logic\Entities\Food\Food.h">
+    <ClInclude Include="code\Logic\Entities\Food\Food.h">
       <Filter>Logic\Entities\Food</Filter>
     </ClInclude>
-    <ClInclude Include="Logic\Entities\Geometry\Cube.h">
+    <ClInclude Include="code\Logic\Entities\Geometry\Cube.h">
       <Filter>Logic\Entities\Geometry</Filter>
     </ClInclude>
-    <ClInclude Include="Logic\Entities\Geometry\Cone.h">
+    <ClInclude Include="code\Logic\Entities\Geometry\Cone.h">
       <Filter>Logic\Entities\Geometry</Filter>
     </ClInclude>
-    <ClInclude Include="Logic\Entities\Map\Map.h">
+    <ClInclude Include="code\Logic\Entities\Map\Map.h">
       <Filter>Logic\Entities\Map</Filter>
     </ClInclude>
-    <ClInclude Include="Logic\Entities\RGBAxis\RGBAxisEntity.h">
+    <ClInclude Include="code\Logic\Entities\RGBAxis\RGBaxis.h">
       <Filter>Logic\Entities\RGBaxis</Filter>
     </ClInclude>
-    <ClInclude Include="Logic\Entities\RGBAxis\RGBaxis.h">
+    <ClInclude Include="code\Logic\Entities\RGBAxis\RGBAxisEntity.h">
       <Filter>Logic\Entities\RGBaxis</Filter>
     </ClInclude>
   </ItemGroup>

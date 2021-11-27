@@ -24,35 +24,34 @@ void Scene::Init()
 	//RGBAxisEntity* rgbaxisentity = new RGBAxisEntity(glm::vec3(0.0f, 0.0f, 0.0f), 500.0);
 	//sceneObjects.push_back(rgbaxisentity);
 
-	
 	gameMap = new Map(this);
 	gameMap->InitLifeGenerationMap();
-	//gameMap->InitNormalMap();
+	////gameMap->InitNormalMap();
 
 
-	int numFoodPlaces = 10;
-	int numFoodPerPlace = 200;
+	//int numFoodPlaces = 10;
+	//int numFoodPerPlace = 200;
 
-	for (int i = 0; i < numFoodPlaces; ++i) {
+	//for (int i = 0; i < numFoodPlaces; ++i) {
 
-		glm::vec3 foodPlace = glm::vec3(-400 + rand() % 800, -400 + rand() % 800, 0);
+	//	glm::vec3 foodPlace = glm::vec3(-400 + rand() % 800, -400 + rand() % 800, 0);
 
-		for (int j = 0; j < numFoodPerPlace; ++j) {
-			sceneObjects.push_back(new Food(glm::vec3(foodPlace.x + -20 + rand() % 40, foodPlace.y + -20 + rand() % 40, 0), glm::vec3(4.0f, 4.0f, 4.0f), glm::vec3(0.2f, 0.8, 0.2f)));
-		}
-	}
+	//	for (int j = 0; j < numFoodPerPlace; ++j) {
+	//		sceneObjects.push_back(new Food(glm::vec3(foodPlace.x + -20 + rand() % 40, foodPlace.y + -20 + rand() % 40, 0), glm::vec3(4.0f, 4.0f, 4.0f), glm::vec3(0.2f, 0.8, 0.2f)));
+	//	}
+	//}
 
-	AntFarm* antFarm = new AntFarm(glm::vec3(200, -175, 0), glm::vec3(140.0f, 140.0f, 140.0f), glm::vec4(0.0f, 0.5f, 0.5f, 1.0f), glm::vec3(550.0f, 00.0f, 100.0f));
-	sceneObjects.push_back(antFarm);
-	antFarm->Init(this);
+	//AntFarm* antFarm = new AntFarm(glm::vec3(200, -175, 0), glm::vec3(140.0f, 140.0f, 140.0f), glm::vec4(0.0f, 0.5f, 0.5f, 1.0f), glm::vec3(550.0f, 00.0f, 100.0f));
+	//sceneObjects.push_back(antFarm);
+	//antFarm->Init(this);
 
-	antFarm = new AntFarm(glm::vec3(-200, 10, 0), glm::vec3(140.0f, 140.0f, 140.0f), glm::vec4(0.5f, 0.0f, 0.5f, 1.0f), glm::vec3(550.0f, -100.0f, 100.0f));
-	sceneObjects.push_back(antFarm);
-	antFarm->Init(this);
+	//antFarm = new AntFarm(glm::vec3(-200, 10, 0), glm::vec3(140.0f, 140.0f, 140.0f), glm::vec4(0.5f, 0.0f, 0.5f, 1.0f), glm::vec3(550.0f, -100.0f, 100.0f));
+	//sceneObjects.push_back(antFarm);
+	//antFarm->Init(this);
 
-	antFarm = new AntFarm(glm::vec3(0, 300, 0), glm::vec3(140.0f, 140.0f, 140.0f), glm::vec4(0.5f, 0.5f, 0.0f, 1.0f), glm::vec3(550.0f, -200.0f, 100.0f));
-	sceneObjects.push_back(antFarm);
-	antFarm->Init(this);
+	//antFarm = new AntFarm(glm::vec3(0, 300, 0), glm::vec3(140.0f, 140.0f, 140.0f), glm::vec4(0.5f, 0.5f, 0.0f, 1.0f), glm::vec3(550.0f, -200.0f, 100.0f));
+	//sceneObjects.push_back(antFarm);
+	//antFarm->Init(this);
 }
 //-------------------------------------------------------------------------
 

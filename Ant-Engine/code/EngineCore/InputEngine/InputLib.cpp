@@ -26,7 +26,7 @@ void InputLib::HandleInput(unsigned char _key, int _x, int _y)
 		EngineCore::GetScene()->GetCamera()->set3D();
 		break;
 	case 'o':
-		EngineCore::GetScene()->GetCamera()->setAZ();
+		EngineCore::GetScene()->GetCamera()->Set2D();
 		break;
 	case 'a': //mov izda
 		EngineCore::GetScene()->GetCamera()->moveLR(-15);

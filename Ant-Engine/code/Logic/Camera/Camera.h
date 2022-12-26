@@ -19,7 +19,7 @@ public:
   void moveLR(GLdouble cs);
   void moveUD(GLdouble cs);
 
-  void setAZ();  // lookAt(eye(0,0,500), look(0,0,0) up(0, 1, 0))
+  void Set2D();  // lookAt(eye(0,0,500), look(0,0,0) up(0, 1, 0))
   void set3D();  // lookAt(eye(500,500,500), look(0,10,0) up(0, 1, 0))
     
   void pitch(GLdouble a); // rotates a degrees on the X axis

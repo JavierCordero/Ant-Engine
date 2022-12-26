@@ -61,7 +61,7 @@ void RenderLib::Display(Scene* _renderScene)   // double buffer
 
 	if (camera != nullptr) {
 
-		for each (Entity * it in _renderScene->sceneObjects)
+		for each (Entity * it in _renderScene->GetSceneObjects())
 		{
 			it->Render(camera->getViewMat());
 		}

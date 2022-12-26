@@ -59,47 +59,23 @@
     <ClCompile Include="code\Logic\Camera\Camera.cpp">
       <Filter>Logic\Camera</Filter>
     </ClCompile>
-    <ClCompile Include="code\Logic\Scenes\Scene.cpp">
-      <Filter>Logic\Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="code\Logic\Entities\AntFarm\AntFarm.cpp">
-      <Filter>Logic\Entities\AntFarm</Filter>
-    </ClCompile>
-    <ClCompile Include="code\Logic\Entities\Ants\Ant.cpp">
-      <Filter>Logic\Entities\Ants</Filter>
-    </ClCompile>
-    <ClCompile Include="code\Logic\Entities\Ants\Trail.cpp">
-      <Filter>Logic\Entities\Ants</Filter>
-    </ClCompile>
-    <ClCompile Include="code\Logic\Entities\Ants\VisionCone.cpp">
-      <Filter>Logic\Entities\Ants</Filter>
-    </ClCompile>
-    <ClCompile Include="code\Logic\Entities\Ants\WarriorAnt.cpp">
-      <Filter>Logic\Entities\Ants</Filter>
-    </ClCompile>
-    <ClCompile Include="code\Logic\Entities\Ants\WorkerAnt.cpp">
-      <Filter>Logic\Entities\Ants</Filter>
-    </ClCompile>
-    <ClCompile Include="code\Logic\Entities\Enviroment\Wall.cpp">
-      <Filter>Logic\Entities\Enviroment</Filter>
-    </ClCompile>
-    <ClCompile Include="code\Logic\Entities\Food\Food.cpp">
-      <Filter>Logic\Entities\Food</Filter>
-    </ClCompile>
-    <ClCompile Include="code\Logic\Entities\Geometry\Cube.cpp">
-      <Filter>Logic\Entities\Geometry</Filter>
-    </ClCompile>
-    <ClCompile Include="code\Logic\Entities\Geometry\Cone.cpp">
-      <Filter>Logic\Entities\Geometry</Filter>
-    </ClCompile>
-    <ClCompile Include="code\Logic\Entities\Map\Map.cpp">
-      <Filter>Logic\Entities\Map</Filter>
-    </ClCompile>
     <ClCompile Include="code\Logic\Entities\RGBAxis\RGBaxis.cpp">
       <Filter>Logic\Entities\RGBaxis</Filter>
     </ClCompile>
     <ClCompile Include="code\Logic\Entities\RGBAxis\RGBAxisEntity.cpp">
       <Filter>Logic\Entities\RGBaxis</Filter>
+    </ClCompile>
+    <ClCompile Include="code\Logic\Entities\Map\SacredMap.cpp">
+      <Filter>Logic\Entities\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="code\Logic\Scenes\SacredWorldScene.cpp">
+      <Filter>Logic\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="code\EngineCore\LogicEngine\Map.cpp">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="code\EngineCore\LogicEngine\Scene.cpp">
+      <Filter>EngineCore\LogicEngine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -163,47 +139,23 @@
     <ClInclude Include="code\Logic\Camera\Camera.h">
       <Filter>Logic\Camera</Filter>
     </ClInclude>
-    <ClInclude Include="code\Logic\Scenes\Scene.h">
-      <Filter>Logic\Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="code\Logic\Entities\AntFarm\AntFarm.h">
-      <Filter>Logic\Entities\AntFarm</Filter>
-    </ClInclude>
-    <ClInclude Include="code\Logic\Entities\Ants\Ant.h">
-      <Filter>Logic\Entities\Ants</Filter>
-    </ClInclude>
-    <ClInclude Include="code\Logic\Entities\Ants\Trail.h">
-      <Filter>Logic\Entities\Ants</Filter>
-    </ClInclude>
-    <ClInclude Include="code\Logic\Entities\Ants\VisionCone.h">
-      <Filter>Logic\Entities\Ants</Filter>
-    </ClInclude>
-    <ClInclude Include="code\Logic\Entities\Ants\WarriorAnt.h">
-      <Filter>Logic\Entities\Ants</Filter>
-    </ClInclude>
-    <ClInclude Include="code\Logic\Entities\Ants\WorkerAnt.h">
-      <Filter>Logic\Entities\Ants</Filter>
-    </ClInclude>
-    <ClInclude Include="code\Logic\Entities\Enviroment\Wall.h">
-      <Filter>Logic\Entities\Enviroment</Filter>
-    </ClInclude>
-    <ClInclude Include="code\Logic\Entities\Food\Food.h">
-      <Filter>Logic\Entities\Food</Filter>
-    </ClInclude>
-    <ClInclude Include="code\Logic\Entities\Geometry\Cube.h">
-      <Filter>Logic\Entities\Geometry</Filter>
-    </ClInclude>
-    <ClInclude Include="code\Logic\Entities\Geometry\Cone.h">
-      <Filter>Logic\Entities\Geometry</Filter>
-    </ClInclude>
-    <ClInclude Include="code\Logic\Entities\Map\Map.h">
-      <Filter>Logic\Entities\Map</Filter>
-    </ClInclude>
     <ClInclude Include="code\Logic\Entities\RGBAxis\RGBaxis.h">
       <Filter>Logic\Entities\RGBaxis</Filter>
     </ClInclude>
     <ClInclude Include="code\Logic\Entities\RGBAxis\RGBAxisEntity.h">
       <Filter>Logic\Entities\RGBaxis</Filter>
+    </ClInclude>
+    <ClInclude Include="code\Logic\Entities\Map\SacredMap.h">
+      <Filter>Logic\Entities\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="code\Logic\Scenes\SacredWorldScene.h">
+      <Filter>Logic\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="code\EngineCore\LogicEngine\Map.h">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="code\EngineCore\LogicEngine\Scene.h">
+      <Filter>EngineCore\LogicEngine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -228,12 +180,6 @@
     <Filter Include="Logic\Entities\RGBaxis">
       <UniqueIdentifier>{64aaeda0-f3bf-477c-8ea1-9955f2a30569}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Logic\Entities\Ants">
-      <UniqueIdentifier>{038b6ecb-6696-4626-ac89-1d0869c8fb42}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Logic\Entities\Enviroment">
-      <UniqueIdentifier>{8533c396-1d88-416a-931a-f67f04df30fa}</UniqueIdentifier>
-    </Filter>
     <Filter Include="EngineCore\PhysicEngine">
       <UniqueIdentifier>{2e4784d7-7f8e-42c0-b3f6-a7433b36b356}</UniqueIdentifier>
     </Filter>
@@ -248,15 +194,6 @@
     </Filter>
     <Filter Include="EngineCore\MathLib">
       <UniqueIdentifier>{574ca6ca-13a7-4223-aed5-11f23975dbbb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Logic\Entities\Food">
-      <UniqueIdentifier>{b8eb16c9-a862-4de8-8f76-8655dc5cb51d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Logic\Entities\AntFarm">
-      <UniqueIdentifier>{605ab330-9fc9-4a25-abe1-1cd4e1bc3e94}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Logic\Entities\Geometry">
-      <UniqueIdentifier>{bb88aa3f-d684-4175-a9b9-7534d0e13a09}</UniqueIdentifier>
     </Filter>
     <Filter Include="EngineCore\RenderEngine">
       <UniqueIdentifier>{a6fbaf49-8991-42fb-9851-ce721189d59f}</UniqueIdentifier>

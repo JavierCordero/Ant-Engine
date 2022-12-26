@@ -20,15 +20,14 @@ void LogicLib::Update(double elapsedTime)
 {
 	Scene* scene = EngineCore::GetScene();
 	if (scene) {
-		for (int i = 0; i < scene->sceneObjects.size(); ++i) {
-			scene->sceneObjects[i]->Update(elapsedTime);
+		for (int i = 0; i < scene->GetSceneObjects().size(); ++i) {
+			scene->GetSceneObjects()[i]->Update(elapsedTime);
 		}
 	}
 }
 
 void LogicLib::PostUpdate(double elapsedTime)
 {
-	
 	for (Entity* ent : destroyEntities) {
 		ent->Destroy();
 		delete ent;
@@ -41,12 +40,12 @@ void LogicLib::PostUpdate(double elapsedTime)
 
 	if (scene) {
 		for (Entity* ent : spawnEntities) {
-			scene->sceneObjects.push_back(ent);
+			scene->GetSceneObjects().push_back(ent);
 		}
 	}
 
 	if (scene) {
-		for each (Entity * it in scene->sceneObjects)
+		for each (Entity * it in scene->GetSceneObjects())
 		{
 			it->PostUpdate(elapsedTime);
 		}

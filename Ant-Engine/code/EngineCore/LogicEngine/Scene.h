@@ -4,7 +4,7 @@
 
 #include <GL/freeglut.h>
 #include <vector>
-#include "..\Camera\Camera.h"
+#include "..\..\Logic\Camera\Camera.h"
 #include "..\..\EngineCore\LogicEngine\Entity.h"
 
 class Map;
@@ -14,19 +14,24 @@ class Scene
 {
 
 public:
-	Scene() {};
+	Scene();
 	virtual ~Scene();
 
 	void Init();
 	Camera* GetCamera() { return camera; };
 	Camera* SetCamera(Camera* _camera) { camera = _camera; }
 
-	std::vector<Entity*> sceneObjects;	
+	void EraseSceneEntity(Entity* _erasedEntity);
+
+	std::vector<Entity*>& GetSceneObjects() { return m_SceneObjects; };
+
+protected:
+	Map* m_SceneMap = nullptr;
 
 private:
-
 	Camera* camera = nullptr;
-	Map* gameMap = nullptr;
+
+	std::vector<Entity*> m_SceneObjects;
 };
 
 //-------------------------------------------------------------------------

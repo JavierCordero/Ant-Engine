@@ -91,8 +91,10 @@
     <ClCompile Include="code\EngineCore\LogicEngine\Component.cpp" />
     <ClCompile Include="code\EngineCore\LogicEngine\Entity.cpp" />
     <ClCompile Include="code\EngineCore\LogicEngine\LogicEngine.cpp" />
+    <ClCompile Include="code\EngineCore\LogicEngine\Map.cpp" />
     <ClCompile Include="code\EngineCore\LogicEngine\Mesh.cpp" />
     <ClCompile Include="code\EngineCore\LogicEngine\Object.cpp" />
+    <ClCompile Include="code\EngineCore\LogicEngine\Scene.cpp" />
     <ClCompile Include="code\EngineCore\MathLib\MathLib.cpp" />
     <ClCompile Include="code\EngineCore\PhysicEngine\PhysicLib.cpp" />
     <ClCompile Include="code\EngineCore\PhysicEngine\Quad.cpp" />
@@ -103,20 +105,10 @@
     <ClCompile Include="code\EngineCore\Texture\Pixmap32RGBA.cpp" />
     <ClCompile Include="code\EngineCore\Texture\Texture.cpp" />
     <ClCompile Include="code\Logic\Camera\Camera.cpp" />
-    <ClCompile Include="code\Logic\Entities\AntFarm\AntFarm.cpp" />
-    <ClCompile Include="code\Logic\Entities\Ants\Ant.cpp" />
-    <ClCompile Include="code\Logic\Entities\Ants\Trail.cpp" />
-    <ClCompile Include="code\Logic\Entities\Ants\VisionCone.cpp" />
-    <ClCompile Include="code\Logic\Entities\Ants\WarriorAnt.cpp" />
-    <ClCompile Include="code\Logic\Entities\Ants\WorkerAnt.cpp" />
-    <ClCompile Include="code\Logic\Entities\Enviroment\Wall.cpp" />
-    <ClCompile Include="code\Logic\Entities\Food\Food.cpp" />
-    <ClCompile Include="code\Logic\Entities\Geometry\Cone.cpp" />
-    <ClCompile Include="code\Logic\Entities\Geometry\Cube.cpp" />
-    <ClCompile Include="code\Logic\Entities\Map\Map.cpp" />
+    <ClCompile Include="code\Logic\Entities\Map\SacredMap.cpp" />
     <ClCompile Include="code\Logic\Entities\RGBAxis\RGBaxis.cpp" />
     <ClCompile Include="code\Logic\Entities\RGBAxis\RGBAxisEntity.cpp" />
-    <ClCompile Include="code\Logic\Scenes\Scene.cpp" />
+    <ClCompile Include="code\Logic\Scenes\SacredWorldScene.cpp" />
     <ClCompile Include="code\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -128,8 +120,10 @@
     <ClInclude Include="code\EngineCore\LogicEngine\Component.h" />
     <ClInclude Include="code\EngineCore\LogicEngine\Entity.h" />
     <ClInclude Include="code\EngineCore\LogicEngine\LogicEngine.h" />
+    <ClInclude Include="code\EngineCore\LogicEngine\Map.h" />
     <ClInclude Include="code\EngineCore\LogicEngine\Mesh.h" />
     <ClInclude Include="code\EngineCore\LogicEngine\Object.h" />
+    <ClInclude Include="code\EngineCore\LogicEngine\Scene.h" />
     <ClInclude Include="code\EngineCore\MathLib\MathLib.h" />
     <ClInclude Include="code\EngineCore\PhysicEngine\PhysicLib.h" />
     <ClInclude Include="code\EngineCore\PhysicEngine\Quad.h" />
@@ -140,20 +134,10 @@
     <ClInclude Include="code\EngineCore\Texture\Pixmap32RGBA.h" />
     <ClInclude Include="code\EngineCore\Texture\Texture.h" />
     <ClInclude Include="code\Logic\Camera\Camera.h" />
-    <ClInclude Include="code\Logic\Entities\AntFarm\AntFarm.h" />
-    <ClInclude Include="code\Logic\Entities\Ants\Ant.h" />
-    <ClInclude Include="code\Logic\Entities\Ants\Trail.h" />
-    <ClInclude Include="code\Logic\Entities\Ants\VisionCone.h" />
-    <ClInclude Include="code\Logic\Entities\Ants\WarriorAnt.h" />
-    <ClInclude Include="code\Logic\Entities\Ants\WorkerAnt.h" />
-    <ClInclude Include="code\Logic\Entities\Enviroment\Wall.h" />
-    <ClInclude Include="code\Logic\Entities\Food\Food.h" />
-    <ClInclude Include="code\Logic\Entities\Geometry\Cone.h" />
-    <ClInclude Include="code\Logic\Entities\Geometry\Cube.h" />
-    <ClInclude Include="code\Logic\Entities\Map\Map.h" />
+    <ClInclude Include="code\Logic\Entities\Map\SacredMap.h" />
     <ClInclude Include="code\Logic\Entities\RGBAxis\RGBaxis.h" />
     <ClInclude Include="code\Logic\Entities\RGBAxis\RGBAxisEntity.h" />
-    <ClInclude Include="code\Logic\Scenes\Scene.h" />
+    <ClInclude Include="code\Logic\Scenes\SacredWorldScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

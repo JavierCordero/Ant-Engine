@@ -72,12 +72,7 @@ void Entity::PostUpdate(double elapsedTime) {
 }
 
 void Entity::Destroy() {
-	auto it = std::find(EngineCore::GetScene()->sceneObjects.begin(), EngineCore::GetScene()->sceneObjects.end(), this);
-
-	if (it != EngineCore::GetScene()->sceneObjects.end()) {
-		int index = it - EngineCore::GetScene()->sceneObjects.begin();
-		EngineCore::GetScene()->sceneObjects.erase(EngineCore::GetScene()->sceneObjects.begin() + index);
-	}
+	EngineCore::GetScene()->EraseSceneEntity(this);
 }
 
 //-------------------------------------------------------------------------

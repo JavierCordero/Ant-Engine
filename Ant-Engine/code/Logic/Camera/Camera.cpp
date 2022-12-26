@@ -5,7 +5,7 @@
 #ifdef _DEBUG
 #include "..\..\EngineCore\checkML.h"
 #endif // _DEBUG
-void Camera::setAZ() 
+void Camera::Set2D() 
 {
   eye= glm::dvec3(0, 0, 500);
   look= glm::dvec3(0, 0, 0);

@@ -2,7 +2,7 @@
 
 #include "..\RenderEngine\RenderLib.h"
 #include "..\..\Logic\Camera\Camera.h"
-#include "..\..\Logic\Scenes\Scene.h"
+#include "..\LogicEngine\Scene.h"
 #include "Entity.h"
 #include <vector>
 #include <string>

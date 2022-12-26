@@ -1,5 +1,5 @@
 #pragma once
-#include "..\..\Logic\Scenes\Scene.h"
+#include "..\LogicEngine\Scene.h"
 #include "..\EngineCore.h"
 #include "..\LogicEngine\LogicEngine.h"
 #include <string>

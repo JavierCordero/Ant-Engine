@@ -1,5 +1,8 @@
 ﻿#include "EngineCore/EngineCore.h"
-#include "Logic/Scenes/Scene.h"
+
+//TO REMOVE
+#include "Logic/Scenes/SacredWorldScene.h"
+//TO REMOVE
 #include <iostream>
 
 #ifdef _DEBUG
@@ -15,13 +18,13 @@ int main(int argc, char* argv[])
 	//_CrtSetBreakAlloc(187);
 #endif // _DEBUG
 
-	cout << "Starting Ant Project..." << '\n';
+	cout << "Starting Sacred Project..." << '\n';
 
 	//Inicializa los sistemas principales del engine
 	EngineCore::InitEngine(argc, argv);
 
 	//Arranca el engine con una escena concreta
-	EngineCore::StartEngine(new Scene());
+	EngineCore::StartEngine(new SacredWorldScene());
 
 	//Cierra el engine y libera toda la memoria
 	EngineCore::StopEngine();

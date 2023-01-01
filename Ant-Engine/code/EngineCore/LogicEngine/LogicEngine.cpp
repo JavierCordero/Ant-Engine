@@ -55,6 +55,6 @@ void LogicLib::PostUpdate(double elapsedTime)
 
 void LogicLib::Destroy(Entity* _ent)
 {
-	_ent->markedForDestroy = true;
+	_ent->MarkObjectForDestroy();
 	destroyEntities.push_back(_ent);
 }

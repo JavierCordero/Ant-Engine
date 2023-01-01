@@ -2,7 +2,7 @@
 #ifndef _H_Camera_H_
 #define _H_Camera_H_
 
-#include <GL/freeglut.h>
+#include <freeglut.h>
 #include <glm.hpp>
 #include "..\..\EngineCore\RenderEngine\Viewport.h"
 

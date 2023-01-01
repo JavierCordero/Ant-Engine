@@ -2,10 +2,11 @@
 #ifndef _H_Scene_H_
 #define _H_Scene_H_
 
-#include <GL/freeglut.h>
+#include <freeglut.h>
 #include <vector>
 #include "..\..\Logic\Camera\Camera.h"
 #include "..\..\EngineCore\LogicEngine\Entity.h"
+#include "Light.h"
 
 class Map;
 //-------------------------------------------------------------------------
@@ -18,8 +19,10 @@ public:
 	virtual ~Scene();
 
 	void Init();
-	Camera* GetCamera() { return camera; };
-	Camera* SetCamera(Camera* _camera) { camera = _camera; }
+	Camera* GetCamera() { return m_SceneCamera; };
+	Camera* SetCamera(Camera* _camera) { m_SceneCamera = _camera; }
+
+	void Render();
 
 	void EraseSceneEntity(Entity* _erasedEntity);
 
@@ -28,8 +31,10 @@ public:
 protected:
 	Map* m_SceneMap = nullptr;
 
+	Light m_Light;
+
 private:
-	Camera* camera = nullptr;
+	Camera* m_SceneCamera = nullptr;
 
 	std::vector<Entity*> m_SceneObjects;
 };

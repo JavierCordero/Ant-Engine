@@ -19,7 +19,7 @@ void PhysicLib::Destroy() {
 
 bool PhysicLib::CheckCollision(CollisionComponent* _objectToCheck)
 {
-	if (!_objectToCheck->componentObjectReference->markedForDestroy && !_objectToCheck->isStatic) {
+	if (!_objectToCheck->componentObjectReference->IsObjectMarkedForDestroy() && !_objectToCheck->isStatic) {
 		for each (CollisionComponent * collider in colliders)
 		{
 			if (collider->isStatic) {
@@ -40,8 +40,8 @@ bool PhysicLib::CheckCollision(CollisionComponent* _objectToCheck)
 }
 
 bool PhysicLib::FinalCheck(CollisionComponent* _collider, CollisionComponent* _objectToCheck) {
-	if (_collider->componentObjectReference != _objectToCheck->componentObjectReference && _collider->componentObjectReference->collisionLayer != _objectToCheck->componentObjectReference->collisionLayer
-		&& !_collider->componentObjectReference->markedForDestroy && !_objectToCheck->componentObjectReference->markedForDestroy) {
+	if (_collider->componentObjectReference != _objectToCheck->componentObjectReference && _collider->componentObjectReference->GetObjectCollisionLayer() != _objectToCheck->componentObjectReference->GetObjectCollisionLayer()
+		&& !_collider->componentObjectReference->IsObjectMarkedForDestroy() && !_objectToCheck->componentObjectReference->IsObjectMarkedForDestroy()) {
 
 		if (MathLib::OverlappingCubes(_objectToCheck->position, _objectToCheck->size, _collider->position, _collider->size)) {
 
@@ -51,7 +51,7 @@ bool PhysicLib::FinalCheck(CollisionComponent* _collider, CollisionComponent* _o
 
 			else if (!_collider->isTrigger) {
 				_objectToCheck->componentObjectReference->SetPosition(_objectToCheck->componentObjectReference->GetPrevPosition());
-				_objectToCheck->componentObjectReference->speed = glm::vec3(0.0f, 0.0f, 0.0f);
+				_objectToCheck->componentObjectReference->SetObjectSpeed(glm::vec3(0.0f, 0.0f, 0.0f));
 				_objectToCheck->componentObjectReference->OnCollision(_collider->componentObjectReference);
 				return true;
 			}

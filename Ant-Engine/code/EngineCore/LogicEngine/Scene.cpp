@@ -17,8 +17,8 @@ Scene::Scene()
 void Scene::Init()
 {
 	// Camera position, view volume and projection
-	camera = new Camera(0, 0, RenderLib::GetWindowWidth(), RenderLib::GetWindowHeight());
-	camera->Set2D();
+	m_SceneCamera = new Camera(0, 0, RenderLib::GetWindowWidth(), RenderLib::GetWindowHeight());
+	m_SceneCamera->Set2D();
 
 	m_SceneMap->InitializeMap();
 }
@@ -26,8 +26,8 @@ void Scene::Init()
 
 Scene::~Scene()
 {
-	delete camera;
-	camera = nullptr;
+	delete m_SceneCamera;
+	m_SceneCamera = nullptr;
 
 	for (auto entity : m_SceneObjects) {
 		if (entity != nullptr) {
@@ -52,5 +52,13 @@ void Scene::EraseSceneEntity(Entity* _erasedEntity)
 	if (it != m_SceneObjects.end()) {
 		int index = it - m_SceneObjects.begin();
 		m_SceneObjects.erase(m_SceneObjects.begin() + index);
+	}
+}
+
+void Scene::Render()
+{
+	for each (Entity * it in GetSceneObjects())
+	{
+		it->Render(m_SceneCamera->getViewMat());
 	}
 }

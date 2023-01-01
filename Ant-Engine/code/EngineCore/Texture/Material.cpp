@@ -14,7 +14,7 @@ Material::~Material()
 {
 }
 
-void Material::load() {
+void Material::Load() {
 	glMaterialfv(face, GL_AMBIENT, glm::value_ptr(ambient));
 	glShadeModel(sh);
 };

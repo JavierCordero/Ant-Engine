@@ -5,9 +5,17 @@
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -22,7 +30,20 @@
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
@@ -36,22 +57,42 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="AntProject.props" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="AntProject.props" />
+  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="AntProject.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="AntProject.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(ProjectDir)libs\glm;$(ProjectDir)libs\freeglut\include;$(IncludePath);$(ProjectDir)\code;$(ProjectDir)\includes</IncludePath>
-    <LibraryPath>$(ProjectDir)libs\freeglut\lib\x86;$(LibraryPath);$(ProjectDir)libs\</LibraryPath>
-    <OutDir>$(ProjectDir)bin\</OutDir>
-    <IntDir>$(ProjectDir)\intermediate\$(Configuration)\</IntDir>
+    <IncludePath>$(IncludePath);$(ProjectDir)\include\glm\;$(ProjectDir)\include\SDL2-2.26.1\;$(ProjectDir)\include\freeglut\;$(ProjectDir)\code</IncludePath>
+    <LibraryPath>$(ProjectDir)libs\$(Platform)\freeglut\;$(ProjectDir)libs\$(Platform)\SDL2-2.26.1\;$(LibraryPath)</LibraryPath>
+    <OutDir>$(ProjectDir)bin\$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)\intermediate\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(IncludePath);$(ProjectDir)\include\glm\;$(ProjectDir)\include\SDL2-2.26.1\;$(ProjectDir)\include\freeglut\;$(ProjectDir)\code</IncludePath>
+    <LibraryPath>$(ProjectDir)libs\$(Platform)\freeglut\;$(ProjectDir)libs\$(Platform)\SDL2-2.26.1\;$(LibraryPath)</LibraryPath>
+    <OutDir>$(ProjectDir)bin\$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)\intermediate\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(ProjectDir)libs\glm;$(ProjectDir)libs\freeglut\include;$(IncludePath);$(ProjectDir)\code;$(ProjectDir)\includes</IncludePath>
-    <LibraryPath>$(ProjectDir)libs\freeglut\lib\x86;$(LibraryPath);$(ProjectDir)libs\</LibraryPath>
-    <OutDir>$(ProjectDir)bin\</OutDir>
-    <IntDir>$(ProjectDir)\intermediate\$(Configuration)\</IntDir>
+    <IncludePath>$(IncludePath);$(ProjectDir)\include\glm\;$(ProjectDir)\include\SDL2-2.26.1\;$(ProjectDir)\include\freeglut\;$(ProjectDir)\code</IncludePath>
+    <LibraryPath>$(ProjectDir)libs\$(Platform)\freeglut\;$(ProjectDir)libs\$(Platform)\SDL2-2.26.1\;$(LibraryPath)</LibraryPath>
+    <OutDir>$(ProjectDir)bin\$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)\intermediate\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(IncludePath);$(ProjectDir)\include\glm\;$(ProjectDir)\include\SDL2-2.26.1\;$(ProjectDir)\include\freeglut\;$(ProjectDir)\code</IncludePath>
+    <LibraryPath>$(ProjectDir)libs\$(Platform)\freeglut\;$(ProjectDir)libs\$(Platform)\SDL2-2.26.1\;$(LibraryPath)</LibraryPath>
+    <OutDir>$(ProjectDir)bin\$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)\intermediate\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -63,7 +104,20 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)bin</AdditionalLibraryDirectories>
-      <AdditionalDependencies>freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>freeglut.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)bin</AdditionalLibraryDirectories>
+      <AdditionalDependencies>freeglut.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -80,7 +134,24 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(SolutionDir)bin</AdditionalLibraryDirectories>
-      <AdditionalDependencies>freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>freeglut.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)bin</AdditionalLibraryDirectories>
+      <AdditionalDependencies>freeglut.lib;SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -90,6 +161,7 @@
     <ClCompile Include="code\EngineCore\InputEngine\InputLib.cpp" />
     <ClCompile Include="code\EngineCore\LogicEngine\Component.cpp" />
     <ClCompile Include="code\EngineCore\LogicEngine\Entity.cpp" />
+    <ClCompile Include="code\EngineCore\LogicEngine\Light.cpp" />
     <ClCompile Include="code\EngineCore\LogicEngine\LogicEngine.cpp" />
     <ClCompile Include="code\EngineCore\LogicEngine\Map.cpp" />
     <ClCompile Include="code\EngineCore\LogicEngine\Mesh.cpp" />
@@ -102,7 +174,7 @@
     <ClCompile Include="code\EngineCore\RenderEngine\RenderLib.cpp" />
     <ClCompile Include="code\EngineCore\RenderEngine\Viewport.cpp" />
     <ClCompile Include="code\EngineCore\Texture\Material.cpp" />
-    <ClCompile Include="code\EngineCore\Texture\Pixmap32RGBA.cpp" />
+    <ClCompile Include="code\EngineCore\Texture\Sprite.cpp" />
     <ClCompile Include="code\EngineCore\Texture\Texture.cpp" />
     <ClCompile Include="code\Logic\Camera\Camera.cpp" />
     <ClCompile Include="code\Logic\Entities\Map\SacredMap.cpp" />
@@ -119,6 +191,7 @@
     <ClInclude Include="code\EngineCore\InputEngine\InputLib.h" />
     <ClInclude Include="code\EngineCore\LogicEngine\Component.h" />
     <ClInclude Include="code\EngineCore\LogicEngine\Entity.h" />
+    <ClInclude Include="code\EngineCore\LogicEngine\Light.h" />
     <ClInclude Include="code\EngineCore\LogicEngine\LogicEngine.h" />
     <ClInclude Include="code\EngineCore\LogicEngine\Map.h" />
     <ClInclude Include="code\EngineCore\LogicEngine\Mesh.h" />
@@ -131,7 +204,7 @@
     <ClInclude Include="code\EngineCore\RenderEngine\RenderLib.h" />
     <ClInclude Include="code\EngineCore\RenderEngine\Viewport.h" />
     <ClInclude Include="code\EngineCore\Texture\Material.h" />
-    <ClInclude Include="code\EngineCore\Texture\Pixmap32RGBA.h" />
+    <ClInclude Include="code\EngineCore\Texture\Sprite.h" />
     <ClInclude Include="code\EngineCore\Texture\Texture.h" />
     <ClInclude Include="code\Logic\Camera\Camera.h" />
     <ClInclude Include="code\Logic\Entities\Map\SacredMap.h" />

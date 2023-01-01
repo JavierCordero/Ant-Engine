@@ -9,12 +9,12 @@
 void Object::SetModelViewMat(glm::dmat4 const& modelViewMat)
 {
 	glMatrixMode(GL_MODELVIEW);
-	glLoadMatrixd(value_ptr(modelViewMat * modelMat));
+	glLoadMatrixd(value_ptr(modelViewMat * m_ModelMat));
 }
 
 void Object::Update(double elapsedTime) {
 	SetPrevPosition(GetPosition());
-	SetPosition(GetPosition() + speed);
+	SetPosition(GetPosition() + m_ObjectSpeed);
 	
 }
 

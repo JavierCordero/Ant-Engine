@@ -1,6 +1,6 @@
 #pragma once
 #include <glm.hpp>
-#include <GL/freeglut.h>
+#include <freeglut.h>
 
 class Viewport {
 public:

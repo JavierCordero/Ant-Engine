@@ -12,15 +12,21 @@ public:
 
 	static void ExitApplication();
 
-	inline static Scene* GetScene() { return scene; }
+	inline static Scene* GetScene() { return m_CurrentScene; }
+	
+	static char* GetResourceFolder() { return m_ResourceFolder; };
 
-	static std::chrono::steady_clock::time_point startTime, endTime;
-	static double elapsedTime;
-	static float fps;
+	static double GetFPS() { return m_FramesPerSecond; };
 
+	static double GetElapsedTime() { return m_FrameElapsedTime; };
 
+	static std::chrono::steady_clock::time_point m_FrameStartTime, m_FrameEndTime;
+	static double m_FrameElapsedTime;
+	static float m_FramesPerSecond;
 
 private:
-	static Scene* scene;
+	static Scene* m_CurrentScene;
+
+	static char m_ResourceFolder[MAX_PATH];
 };
 

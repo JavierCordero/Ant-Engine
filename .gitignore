@@ -2,3 +2,8 @@
 /Ant-Engine/intermediate
 /Ant-Engine/Temp.txt
 *.pdb
+*.props
+*.vcxproj
+*.filters
+*.user
+*.exe

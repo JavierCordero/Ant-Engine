@@ -4,15 +4,17 @@
 #include <iomanip>
 #include <gl/GL.h>
 #include <gl/GLU.h>
-#include <GL/glut.h>
-#include <GL/freeglut.h>
+#include <glut.h>
+#include <freeglut.h>
+#include <SDL.h>
+#include <SDL_image.h>
 
 #ifdef _DEBUG
 #include "..\checkML.h"
 #endif // _DEBUG
 
 int RenderLib::window = 0;
-const char* RenderLib::WINDOW_NAME = "Ant project";
+const char* RenderLib::WINDOW_NAME = "Sacred project";
 
 bool RenderLib::Init(int argc, char* argv[])
 {
@@ -39,36 +41,35 @@ bool RenderLib::Init(int argc, char* argv[])
 	glClearColor(1.0, 1.0, 1.0, 1.0);  // background color (alpha=1 -> opaque)
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-	//glEnable(GL_LIGHTING); //Activa la iluminación de OpenGL
+	glEnable(GL_TEXTURE_2D);
 	glEnable(GL_NORMALIZE); // normalización de vectores
 	glEnable(GL_CULL_FACE); //Para optimizar el renderizado de las nuevas entidades
-	glEnable(GL_TEXTURE_2D);
 	
+	std::cout << "Initializing SDL2...\n";
+	SDL_Init(SDL_INIT_EVERYTHING);
+	IMG_Init(IMG_INIT_JPG);
+	IMG_Init(IMG_INIT_PNG);
+
 	return true;
 }
 
 void RenderLib::Destroy()
 {
 	glutDestroyWindow(window);  // Destroy the context 
+	glDisable(GL_TEXTURE_2D);
+	glDisable(GL_BLEND);
+	IMG_Quit();
 }
 
 void RenderLib::Display(Scene* _renderScene)   // double buffer
 {
+	glClearColor(1.0, 1.0, 1.0, 1.0);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	Camera* camera = _renderScene->GetCamera();
-
-	if (camera != nullptr) {
-
-		for each (Entity * it in _renderScene->GetSceneObjects())
-		{
-			it->Render(camera->getViewMat());
-		}
-	}
-
-	//Text3D text = LogicLib::text3D.begin();
-
+	_renderScene->Render();
+	
 	for (int i = 0; i < LogicLib::text3D.size(); ++i) {
 		Draw3DText(LogicLib::text3D[i].position, LogicLib::text3D[i].color, LogicLib::text3D[i].text);
 	}

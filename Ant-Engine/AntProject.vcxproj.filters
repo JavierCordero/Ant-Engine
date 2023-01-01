@@ -47,9 +47,6 @@
     <ClCompile Include="code\EngineCore\Texture\Material.cpp">
       <Filter>EngineCore\Texture</Filter>
     </ClCompile>
-    <ClCompile Include="code\EngineCore\Texture\Pixmap32RGBA.cpp">
-      <Filter>EngineCore\Texture</Filter>
-    </ClCompile>
     <ClCompile Include="code\EngineCore\Texture\Texture.cpp">
       <Filter>EngineCore\Texture</Filter>
     </ClCompile>
@@ -75,6 +72,12 @@
       <Filter>EngineCore\LogicEngine</Filter>
     </ClCompile>
     <ClCompile Include="code\EngineCore\LogicEngine\Scene.cpp">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="code\EngineCore\Texture\Sprite.cpp">
+      <Filter>EngineCore\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="code\EngineCore\LogicEngine\Light.cpp">
       <Filter>EngineCore\LogicEngine</Filter>
     </ClCompile>
   </ItemGroup>
@@ -124,9 +127,6 @@
     <ClInclude Include="code\EngineCore\Texture\Material.h">
       <Filter>EngineCore\Texture</Filter>
     </ClInclude>
-    <ClInclude Include="code\EngineCore\Texture\Pixmap32RGBA.h">
-      <Filter>EngineCore\Texture</Filter>
-    </ClInclude>
     <ClInclude Include="code\EngineCore\Texture\Texture.h">
       <Filter>EngineCore\Texture</Filter>
     </ClInclude>
@@ -155,6 +155,12 @@
       <Filter>EngineCore\LogicEngine</Filter>
     </ClInclude>
     <ClInclude Include="code\EngineCore\LogicEngine\Scene.h">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="code\EngineCore\Texture\Sprite.h">
+      <Filter>EngineCore\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="code\EngineCore\LogicEngine\Light.h">
       <Filter>EngineCore\LogicEngine</Filter>
     </ClInclude>
   </ItemGroup>

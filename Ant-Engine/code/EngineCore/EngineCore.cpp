@@ -4,7 +4,6 @@
 #include "LogicEngine/LogicEngine.h"
 #include "InputEngine/InputLib.h"
 #include "PhysicEngine/PhysicLib.h"
-#include "OnlineEngine/OnlineLib.h"
 #include <time.h>
 #ifdef _DEBUG
 #include "checkML.h"
@@ -44,7 +43,6 @@ void EngineCore::InitEngine(int argc, char* argv[])
 	LogicLib::Init();
 	InputLib::Init();
 	PhysicLib::Init();
-	OnlineLib::Init();
 
 	std::cout << "---- All core libs initialized successfully ----" << '\n';
 	

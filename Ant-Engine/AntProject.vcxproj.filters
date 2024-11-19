@@ -89,9 +89,6 @@
     <ClCompile Include="code\EngineCore\RenderEngine\TextRenderer.cpp">
       <Filter>EngineCore\RenderEngine</Filter>
     </ClCompile>
-    <ClCompile Include="code\EngineCore\OnlineEngine\OnlineLib.cpp">
-      <Filter>EngineCore\OnlineEngine</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\EngineCore\EngineComponents\CollisionComponent.h">
@@ -187,9 +184,6 @@
     <ClInclude Include="code\EngineCore\RenderEngine\TextRenderer.h">
       <Filter>EngineCore\RenderEngine</Filter>
     </ClInclude>
-    <ClInclude Include="code\EngineCore\OnlineEngine\OnlineLib.h">
-      <Filter>EngineCore\OnlineEngine</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="EngineCore">
@@ -239,9 +233,6 @@
     </Filter>
     <Filter Include="EngineCore\Interface">
       <UniqueIdentifier>{99a371a4-bdf6-4e22-8500-379f5e3ede29}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="EngineCore\OnlineEngine">
-      <UniqueIdentifier>{bc5ffbdc-feb3-4c41-b9aa-d0b7fe93894d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

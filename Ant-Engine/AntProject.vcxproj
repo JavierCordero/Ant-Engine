@@ -46,7 +46,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -174,7 +174,6 @@
     <ClCompile Include="code\EngineCore\LogicEngine\ObjectLoader.cpp" />
     <ClCompile Include="code\EngineCore\LogicEngine\Scene.cpp" />
     <ClCompile Include="code\EngineCore\MathLib\MathLib.cpp" />
-    <ClCompile Include="code\EngineCore\OnlineEngine\OnlineLib.cpp" />
     <ClCompile Include="code\EngineCore\PhysicEngine\PhysicLib.cpp" />
     <ClCompile Include="code\EngineCore\PhysicEngine\Quad.cpp" />
     <ClCompile Include="code\EngineCore\RenderEngine\Primitives.cpp" />
@@ -208,7 +207,6 @@
     <ClInclude Include="code\EngineCore\LogicEngine\ObjectLoader.h" />
     <ClInclude Include="code\EngineCore\LogicEngine\Scene.h" />
     <ClInclude Include="code\EngineCore\MathLib\MathLib.h" />
-    <ClInclude Include="code\EngineCore\OnlineEngine\OnlineLib.h" />
     <ClInclude Include="code\EngineCore\PhysicEngine\PhysicLib.h" />
     <ClInclude Include="code\EngineCore\PhysicEngine\Quad.h" />
     <ClInclude Include="code\EngineCore\RenderEngine\Primitives.h" />

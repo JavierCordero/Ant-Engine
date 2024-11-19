@@ -4,6 +4,7 @@
 #include "LogicEngine/LogicEngine.h"
 #include "InputEngine/InputLib.h"
 #include "PhysicEngine/PhysicLib.h"
+#include "OnlineEngine/OnlineLib.h"
 #include <time.h>
 #ifdef _DEBUG
 #include "checkML.h"
@@ -28,21 +29,24 @@ float EngineCore::m_FramesPerSecond = 0.0;
 Scene* EngineCore::m_CurrentScene = nullptr;
 char EngineCore::m_ResourceFolder[MAX_PATH] = "\0";
 
+int EngineCore::m_MaxFrameRate = 60;
+
 glm::dvec2 mCoord;
 
 void EngineCore::InitEngine(int argc, char* argv[])
 {
 
 	srand(time(NULL));
+	
+	strcpy_s(m_ResourceFolder, "resources\\");
 
 	RenderLib::Init(argc, argv);
 	LogicLib::Init();
 	InputLib::Init();
 	PhysicLib::Init();
+	OnlineLib::Init();
 
-	std::cout << "All core libs initialized successfully!" << '\n';
-
-	strcpy_s(m_ResourceFolder, "resources\\");
+	std::cout << "---- All core libs initialized successfully ----" << '\n';
 	
 	glutDisplayFunc(Render);
 	glutIdleFunc(MainLoop);
@@ -87,19 +91,27 @@ void MainLoop() {
 	EngineCore::m_FrameEndTime = std::chrono::steady_clock::now();
 	EngineCore::m_FrameElapsedTime = (std::chrono::duration_cast<std::chrono::milliseconds>(EngineCore::m_FrameEndTime - EngineCore::m_FrameStartTime).count()) / 1000.0;
 
+	if (EngineCore::m_FrameElapsedTime < 1.f / EngineCore::m_MaxFrameRate)
+	{
+		double time = (1.f / EngineCore::m_MaxFrameRate) - EngineCore::m_FrameElapsedTime;
+		Sleep(time * 1000);
+		EngineCore::m_FrameElapsedTime += time;
+	}
+
 	if (EngineCore::GetElapsedTime() != 0) {
 		EngineCore::m_FramesPerSecond = 1 / EngineCore::GetElapsedTime();
 	}
 
-	Text3D text; text.position = glm::vec3(540.0f, 450.0f, 0.0f); text.color = glm::vec3(0.0f, 0.0f, 0.0f); text.text = "FPS: " + std::to_string(EngineCore::GetFPS()) + "(" + std::to_string(EngineCore::GetElapsedTime()) + "ms)";
+	Text3D text; 
+	text.position = glm::vec3(540.0f, 450.0f, 0.0f); 
+	text.color = glm::vec3(0.0f, 0.0f, 0.0f); 
+	text.text = "FPS: " + std::to_string(EngineCore::GetFPS()) + "(" + std::to_string(EngineCore::GetElapsedTime()) + "ms)";
 	LogicLib::text3D.push_back(text);
-
 }
 
-void Render() {
-	if (Scene* scene = EngineCore::GetScene()) {
-		CustomRender(scene);
-	}
+void Render() 
+{
+	CustomRender(EngineCore::GetScene());
 }
 
 void CustomRender(Scene* _sceneToDisplay) {

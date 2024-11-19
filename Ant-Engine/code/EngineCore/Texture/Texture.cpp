@@ -59,21 +59,27 @@ void Texture::Load(const char* _newTextureName)
 		return;
 	}
 
+	CreateFromSurface(surface);
+	SDL_FreeSurface(surface);
+}
+
+void Texture::CreateFromSurface(SDL_Surface* _surface)
+{
 	GLint nColors;
 	GLenum textureFormat = GL_RGB;
 
 	//get number of channels in the SDL surface
-	nColors = surface->format->BytesPerPixel;
+	nColors = _surface->format->BytesPerPixel;
 
 	//contains an alpha channel
 	if (nColors == 4)
 	{
-		if (surface->format->Rmask == 0x000000ff)
+		if (_surface->format->Rmask == 0x000000ff)
 			textureFormat = GL_RGBA;
 	}
 	else if (nColors == 3) //no alpha channel
 	{
-		if (surface->format->Rmask == 0x000000ff)
+		if (_surface->format->Rmask == 0x000000ff)
 			textureFormat = GL_RGB;
 	}
 	else
@@ -83,9 +89,7 @@ void Texture::Load(const char* _newTextureName)
 	}
 
 	glBindTexture(GL_TEXTURE_2D, m_TextureID);
-	
-	glTexImage2D(GL_TEXTURE_2D, 0, textureFormat, surface->w, surface->h, 0, textureFormat, GL_UNSIGNED_BYTE, surface->pixels);
-	glBindTexture(GL_TEXTURE_2D, 0);
 
-	SDL_FreeSurface(surface);
+	glTexImage2D(GL_TEXTURE_2D, 0, textureFormat, _surface->w, _surface->h, 0, textureFormat, GL_UNSIGNED_BYTE, _surface->pixels);
+	glBindTexture(GL_TEXTURE_2D, 0);
 }

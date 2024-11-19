@@ -13,20 +13,19 @@ std::vector<Entity*> LogicLib::spawnEntities;
 
 void LogicLib::Init()
 {
-	std::cout << "Initializing Logic lib..." << '\n';
+	std::cout << "	|-Initializing Logic lib..." << '\n';
 }
 
-void LogicLib::Update(double elapsedTime)
+void LogicLib::Update(double _elapsedTime)
 {
 	Scene* scene = EngineCore::GetScene();
-	if (scene) {
-		for (int i = 0; i < scene->GetSceneObjects().size(); ++i) {
-			scene->GetSceneObjects()[i]->Update(elapsedTime);
-		}
+	if (scene)
+	{
+		scene->Update(_elapsedTime);
 	}
 }
 
-void LogicLib::PostUpdate(double elapsedTime)
+void LogicLib::PostUpdate(double _elapsedTime)
 {
 	for (Entity* ent : destroyEntities) {
 		ent->Destroy();
@@ -47,14 +46,14 @@ void LogicLib::PostUpdate(double elapsedTime)
 	if (scene) {
 		for each (Entity * it in scene->GetSceneObjects())
 		{
-			it->PostUpdate(elapsedTime);
+			it->PostUpdate(_elapsedTime);
 		}
 		spawnEntities.clear();
 	}
 }
 
-void LogicLib::Destroy(Entity* _ent)
+void LogicLib::Destroy(Entity* _entity)
 {
-	_ent->MarkObjectForDestroy();
-	destroyEntities.push_back(_ent);
+	_entity->MarkObjectForDestroy();
+	destroyEntities.push_back(_entity);
 }

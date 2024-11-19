@@ -9,6 +9,7 @@
 #include "Light.h"
 
 class Map;
+class Interface;
 //-------------------------------------------------------------------------
 
 class Scene
@@ -23,10 +24,14 @@ public:
 	Camera* SetCamera(Camera* _camera) { m_SceneCamera = _camera; }
 
 	void Render();
+	void RenderInterface();
+	virtual void Update(float _elapsedTime);
+	virtual void HandleInput(unsigned char _key);
 
 	void EraseSceneEntity(Entity* _erasedEntity);
 
 	std::vector<Entity*>& GetSceneObjects() { return m_SceneObjects; };
+	std::vector<Interface*>& GetInterfaceObjects() { return m_InterfaceObjects; };
 
 protected:
 	Map* m_SceneMap = nullptr;
@@ -37,6 +42,7 @@ private:
 	Camera* m_SceneCamera = nullptr;
 
 	std::vector<Entity*> m_SceneObjects;
+	std::vector<Interface*> m_InterfaceObjects;
 };
 
 //-------------------------------------------------------------------------

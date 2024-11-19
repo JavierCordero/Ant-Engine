@@ -2,7 +2,7 @@
 #include "Mesh.h"
 #include <gtc/matrix_transform.hpp>  
 #include <gtc/type_ptr.hpp>
-
+#include "ObjectLoader.h"
 #include <string>
 
 #ifdef _DEBUG
@@ -54,6 +54,8 @@ void Mesh::FinalDraw() {
 			}
 		}
 
+		glScalef(m_MeshScale.x, m_MeshScale.y, m_MeshScale.z);
+
 		glDrawArrays(m_Type, 0, m_NumVertices);   // kind of primitives, first, count
 
 		glDisableClientState(GL_TEXTURE_COORD_ARRAY);
@@ -75,7 +77,6 @@ RectangleMesh::RectangleMesh(Object* _objectReference, float _width, float _heig
 {
 	m_Type = GL_TRIANGLE_STRIP;
 	m_NumVertices = 4;
-	int lados = 4;
 
 	m_Vertices = new dvec3[m_NumVertices];
 	m_Vertices[0] = dvec3(-_width / 2, _height / 2, 0);
@@ -94,4 +95,19 @@ RectangleMesh::RectangleMesh(Object* _objectReference, float _width, float _heig
 	m_TexCoords[1] = dvec2(0, 1);
 	m_TexCoords[2] = dvec2(1, 0);
 	m_TexCoords[3] = dvec2(1, 1);
+}
+
+void Mesh::ParseFromOBJ(int _numVertices, std::vector<glm::dvec3> _vertices)
+{
+	m_Type = GL_TRIANGLE_STRIP;
+
+	m_NumVertices = _numVertices;
+
+	m_Vertices = new dvec3[m_NumVertices];
+	m_Colors = new dvec4[m_NumVertices];
+
+	for (int i = 0; i < m_NumVertices; ++i)
+	{
+		m_Vertices[i] = _vertices[i];
+	}
 }

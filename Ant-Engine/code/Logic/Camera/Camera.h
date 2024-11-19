@@ -4,12 +4,15 @@
 
 #include <freeglut.h>
 #include <glm.hpp>
+#include "../../EngineCore/LogicEngine/Entity.h"
 #include "..\..\EngineCore\RenderEngine\Viewport.h"
 
-class Camera : public Viewport {
+class Camera : public Viewport, public Entity {
 public:
   Camera(GLint _x, GLint _y, GLsizei _cameraWidth, GLsizei _cameraHeight);
   virtual ~Camera() {};
+
+  virtual void RecieveInput(unsigned char _key);
 
   GLint speed = 1;
   // view matrix

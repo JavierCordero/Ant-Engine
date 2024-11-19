@@ -23,10 +23,12 @@ public:
 	static std::chrono::steady_clock::time_point m_FrameStartTime, m_FrameEndTime;
 	static double m_FrameElapsedTime;
 	static float m_FramesPerSecond;
+	static int m_MaxFrameRate;
 
 private:
 	static Scene* m_CurrentScene;
 
 	static char m_ResourceFolder[MAX_PATH];
+
 };
 

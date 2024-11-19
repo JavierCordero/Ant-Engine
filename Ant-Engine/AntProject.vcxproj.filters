@@ -80,6 +80,18 @@
     <ClCompile Include="code\EngineCore\LogicEngine\Light.cpp">
       <Filter>EngineCore\LogicEngine</Filter>
     </ClCompile>
+    <ClCompile Include="code\EngineCore\LogicEngine\ObjectLoader.cpp">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="code\EngineCore\Interface\Interface.cpp">
+      <Filter>EngineCore\Interface</Filter>
+    </ClCompile>
+    <ClCompile Include="code\EngineCore\RenderEngine\TextRenderer.cpp">
+      <Filter>EngineCore\RenderEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="code\EngineCore\OnlineEngine\OnlineLib.cpp">
+      <Filter>EngineCore\OnlineEngine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\EngineCore\EngineComponents\CollisionComponent.h">
@@ -163,6 +175,21 @@
     <ClInclude Include="code\EngineCore\LogicEngine\Light.h">
       <Filter>EngineCore\LogicEngine</Filter>
     </ClInclude>
+    <ClInclude Include="code\EngineCore\LogicEngine\ObjectLoader.h">
+      <Filter>EngineCore\LogicEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="code\Logic\Sudoku\SudokuSolver.h">
+      <Filter>Logic\SudokuSolver</Filter>
+    </ClInclude>
+    <ClInclude Include="code\EngineCore\Interface\Interface.h">
+      <Filter>EngineCore\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="code\EngineCore\RenderEngine\TextRenderer.h">
+      <Filter>EngineCore\RenderEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="code\EngineCore\OnlineEngine\OnlineLib.h">
+      <Filter>EngineCore\OnlineEngine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="EngineCore">
@@ -206,6 +233,15 @@
     </Filter>
     <Filter Include="EngineCore\InputEngine">
       <UniqueIdentifier>{1f5ce094-69db-47a3-a88b-37277cf0f586}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\SudokuSolver">
+      <UniqueIdentifier>{424309ec-6547-4b8a-8e9e-476378744a6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineCore\Interface">
+      <UniqueIdentifier>{99a371a4-bdf6-4e22-8500-379f5e3ede29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EngineCore\OnlineEngine">
+      <UniqueIdentifier>{bc5ffbdc-feb3-4c41-b9aa-d0b7fe93894d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

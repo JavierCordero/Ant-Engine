@@ -1,8 +1,9 @@
 #include "Scene.h"
 #include <iostream>
 #include "..\..\EngineCore\RenderEngine\RenderLib.h"
-
+#include "../../EngineCore/Interface/Interface.h"
 #include "Map.h"
+#include "../../../include/glm/gtc/matrix_transform.hpp"
 
 #ifdef _DEBUG
 #include "..\..\EngineCore\checkML.h"
@@ -20,15 +21,17 @@ void Scene::Init()
 	m_SceneCamera = new Camera(0, 0, RenderLib::GetWindowWidth(), RenderLib::GetWindowHeight());
 	m_SceneCamera->Set2D();
 
-	m_SceneMap->InitializeMap();
+	GetSceneObjects().push_back(m_SceneCamera);
+
+	if (m_SceneMap != nullptr)
+	{
+		m_SceneMap->InitializeMap();
+	}
 }
 //-------------------------------------------------------------------------
 
 Scene::~Scene()
 {
-	delete m_SceneCamera;
-	m_SceneCamera = nullptr;
-
 	for (auto entity : m_SceneObjects) {
 		if (entity != nullptr) {
 			delete entity;
@@ -60,5 +63,28 @@ void Scene::Render()
 	for each (Entity * it in GetSceneObjects())
 	{
 		it->Render(m_SceneCamera->getViewMat());
+	}
+}
+
+void Scene::RenderInterface()
+{
+	glm::mat4 projection = glm::ortho(0, RenderLib::GetWindowWidth(), RenderLib::GetWindowHeight(), 0);
+	for each (Interface * inter in GetInterfaceObjects())
+	{
+		inter->Render(projection);
+	}
+}
+
+void Scene::Update(float _elapsedTime)
+{
+	for (int i = 0; i < GetSceneObjects().size(); ++i) {
+		GetSceneObjects()[i]->Update(_elapsedTime);
+	}
+}
+
+void Scene::HandleInput(unsigned char _key)
+{
+	for (int i = 0; i < GetSceneObjects().size(); ++i) {
+		GetSceneObjects()[i]->RecieveInput(_key);
 	}
 }

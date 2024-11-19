@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 	//_CrtSetBreakAlloc(187);
 #endif // _DEBUG
 
-	cout << "Starting Sacred Project..." << '\n';
+	cout << "---- Starting Sacred Project ----" << '\n';
 
 	//Inicializa los sistemas principales del engine
 	EngineCore::InitEngine(argc, argv);

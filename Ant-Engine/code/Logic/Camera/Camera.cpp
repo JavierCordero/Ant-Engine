@@ -107,7 +107,7 @@ void Camera::setPM()
 
 
 Camera::Camera(GLint _x, GLint _y, GLsizei _cameraWidth, GLsizei _cameraHeight) : Viewport(_cameraWidth, _cameraHeight), viewMat(1.0), projMat(1.0),
-xRight(getW() / 2.0), xLeft(-xRight), yTop(getH() / 2.0), yBot(-yTop)
+xRight(getW() / 2.0), xLeft(-xRight), yTop(getH() / 2.0), yBot(-yTop), Entity(glm::vec3(0,0,0), glm::vec3(1,1,1))
 {
 	SetSize(_cameraWidth, _cameraHeight);
 }
@@ -152,4 +152,46 @@ void Camera::rotatePY(GLdouble incrPitch, GLdouble incrYaw) {
 	right = glm::normalize(right);
 
 	viewMat = lookAt(eye, eye + front, up);
+}
+
+void Camera::RecieveInput(unsigned char _key)
+{
+	switch (_key)
+	{
+	case '+':
+		scale(+0.01);   // zoom in  
+		break;
+	case '-':
+		scale(-0.01);   // zoom out
+		break;
+	case 'l':
+		set3D();
+		break;
+	case 'o':
+		Set2D();
+		break;
+	case 'a': //mov izda
+		moveLR(-15);
+		break;
+	case 'd': //mov dcha
+		moveLR(15);
+		break;
+	case 's': //mov back
+		moveFB(15);
+		break;
+	case 'w': // mov fow
+		moveFB(-15);
+		break;
+	case 'q': //mov up
+		moveUD(15);
+		break;
+	case 'e': // mov down
+		moveUD(-15);
+		break;
+	case 'p': //cambio entre orto y persp
+		setPrj();
+		break;
+	default:
+		break;
+	}
 }
